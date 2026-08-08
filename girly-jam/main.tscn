@@ -48,3 +48,12 @@ position = Vector2(552, 220)
 
 [node name="Towel" parent="World/Tools" unique_id=2717972 instance=ExtResource("9_efxa6")]
 position = Vector2(721, 127)
+
+[connection signal="mouse_entered" from="World/Tools/Sponge" to="World/Tools/Sponge" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="World/Tools/Sponge" to="World/Tools/Sponge" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="World/Tools/Brush" to="World/Tools/Brush" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="World/Tools/Brush" to="World/Tools/Brush" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="World/Tools/Sewing" to="World/Tools/Sewing" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="World/Tools/Sewing" to="World/Tools/Sewing" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="World/Tools/Towel" to="World/Tools/Towel" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="World/Tools/Towel" to="World/Tools/Towel" method="_on_mouse_exited"]
