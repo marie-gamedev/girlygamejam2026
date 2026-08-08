@@ -1,7 +1,55 @@
 [gd_scene format=3 uid="uid://c3ptfrli3w8h0"]
 
 [ext_resource type="PackedScene" uid="uid://2kho1fc0314n" path="res://tools/tool.tscn" id="1_vsiwj"]
+[ext_resource type="Texture2D" uid="uid://c2heguf0hdm7w" path="res://assets/bubble.png" id="2_ntmff"]
+[ext_resource type="Texture2D" uid="uid://c5cjkuy6q8y1c" path="res://assets/bubble2.png" id="3_budxj"]
+
+[sub_resource type="Gradient" id="Gradient_ntmff"]
+offsets = PackedFloat32Array(0, 0.09836066, 0.8770492, 0.9918033)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ntmff"]
+gradient = SubResource("Gradient_ntmff")
+
+[sub_resource type="Curve" id="Curve_vsiwj"]
+_data = [Vector2(0, 0.20224726), 0.0, 0.0, 0, 0, Vector2(0.18243244, 1), -0.7522742, 0.0, 0, 0, Vector2(0.9054054, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_vsiwj"]
+curve = SubResource("Curve_vsiwj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vsiwj"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 52.2
+gravity = Vector3(0, 8.31, 0)
+scale_min = 0.049999997
+scale_max = 0.19999999
+scale_curve = SubResource("CurveTexture_vsiwj")
+color_ramp = SubResource("GradientTexture1D_ntmff")
+turbulence_noise_strength = 13.53
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_budxj"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 52.2
+gravity = Vector3(0, 98, 0)
+scale_min = 0.099999994
+scale_max = 0.29999998
+color_ramp = SubResource("GradientTexture1D_ntmff")
 
 [node name="Sponge" unique_id=1176703255 instance=ExtResource("1_vsiwj")]
 
-[connection signal="input_event" from="." to="." method="_on_input_event"]
+[node name="StayingBubbles" type="GPUParticles2D" parent="ParticleSystem" parent_id_path=PackedInt32Array(1660493306) index="0" unique_id=870292410]
+position = Vector2(6, -73)
+amount = 100
+texture = ExtResource("3_budxj")
+lifetime = 5.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_vsiwj")
+
+[node name="MovingBubbles" type="GPUParticles2D" parent="ParticleSystem" parent_id_path=PackedInt32Array(1660493306) index="1" unique_id=2012713097]
+position = Vector2(9, -53)
+amount = 20
+texture = ExtResource("2_ntmff")
+process_material = SubResource("ParticleProcessMaterial_budxj")

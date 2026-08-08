@@ -6,8 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gk12"]
 size = Vector2(142, 182.25)
 
-[node name="Tool" type="Area2D" unique_id=1391043698]
+[node name="Tool" type="Area2D" unique_id=1391043698 node_paths=PackedStringArray("particle_system")]
 script = ExtResource("1_f6vxs")
+particle_system = NodePath("ParticleSystem")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=36770998]
 position = Vector2(3, 3)
@@ -15,5 +16,8 @@ shape = SubResource("RectangleShape2D_3gk12")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2090715542]
 texture = ExtResource("2_3gk12")
+
+[node name="ParticleSystem" type="Node2D" parent="." unique_id=1660493306]
+position = Vector2(-8, 56)
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

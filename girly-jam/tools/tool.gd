@@ -4,9 +4,12 @@ class_name Tool extends Node2D
 var follow: bool = false
 var starting_pos: Vector2
 
+@export var particle_system: Node2D
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	starting_pos = position
+	toggle_particle_system(false)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,20 +17,15 @@ func _process(delta):
 	if follow:
 		position = get_global_mouse_position()
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-			print("cleeaaaningg or doing smth.. yeyyy!!!")
+			toggle_particle_system(true)
+		else:
+			toggle_particle_system(false)
 
-
-#func _on_mouse_entered():
-	#print("mouse hovering tool")
-	#ToolsManager.set_mode(Enums.tools_mode[String(name).to_upper()])
-	#hovering = true
-
-
-#func _on_mouse_exited():
-	#print("mouse left tool area")
-	#ToolsManager.set_mode(Enums.tools_mode.NONE)
-	#hovering = false
-
+func toggle_particle_system(toggle: bool) -> void:
+	if get_child_count() == 0:
+		return
+	for ps in particle_system.get_children():
+		ps.emitting = toggle
 
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
