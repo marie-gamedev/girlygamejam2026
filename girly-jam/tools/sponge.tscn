@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c3ptfrli3w8h0"]
+
+[ext_resource type="PackedScene" uid="uid://2kho1fc0314n" path="res://tools/tool.tscn" id="1_vsiwj"]
+
+[node name="Sponge" unique_id=1176703255 instance=ExtResource("1_vsiwj")]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

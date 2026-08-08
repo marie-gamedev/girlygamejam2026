@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://ddy636gaojouq" path="res://game_manager.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c8wunoa3kjlkn" path="res://dialogue/dialogues.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://bht1xfc28yodc" path="res://tools_manager.gd" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dxit0nxc58gab" path="res://assets/background.jpg" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://c3ptfrli3w8h0" path="res://tools/sponge.tscn" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://ds08k6t2ko55h" path="res://assets/carriage.png" id="6_7mycd"]
 
 [node name="Node2D" type="Node2D" unique_id=1190668301]
 
@@ -10,9 +13,26 @@
 script = ExtResource("1_ig7tw")
 dialogues = NodePath("../Dialogues")
 
+[node name="ToolsManager" type="Node2D" parent="." unique_id=1053994227 node_paths=PackedStringArray("sponge")]
+script = ExtResource("2_1bvp3")
+sponge = NodePath("../World/Tools/Sponge")
+
 [node name="Dialogues" parent="." unique_id=468955842 instance=ExtResource("2_0xm2m")]
 
-[node name="Background" type="Sprite2D" parent="." unique_id=386525730]
-position = Vector2(388, 389.00003)
-scale = Vector2(2.5519166, 2.5519168)
+[node name="World" type="Node2D" parent="." unique_id=1016165233]
+scale = Vector2(2.195946, 2.195946)
+
+[node name="Background" type="Sprite2D" parent="World" unique_id=386525730]
+position = Vector2(148, 172.13539)
+scale = Vector2(1.1621035, 1.1621037)
 texture = ExtResource("3_h2yge")
+
+[node name="Carriage" type="Sprite2D" parent="World" unique_id=2008301679]
+position = Vector2(219.04001, 246.81845)
+texture = ExtResource("6_7mycd")
+
+[node name="Tools" type="Node2D" parent="World" unique_id=1419158990]
+scale = Vector2(0.4553846, 0.4553846)
+
+[node name="Sponge" parent="World/Tools" unique_id=1176703255 instance=ExtResource("5_lquwl")]
+position = Vector2(900, 174)

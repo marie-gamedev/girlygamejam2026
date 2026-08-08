@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://2kho1fc0314n"]
+
+[ext_resource type="Script" uid="uid://c6o6i2ykqr12" path="res://tools/tool.gd" id="1_f6vxs"]
+[ext_resource type="Texture2D" uid="uid://dnf57hmvmkjdq" path="res://assets/tools/sponge.png" id="2_3gk12"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gk12"]
+size = Vector2(142, 182.25)
+
+[node name="Tool" type="Area2D" unique_id=1391043698]
+script = ExtResource("1_f6vxs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=36770998]
+position = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_3gk12")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2090715542]
+texture = ExtResource("2_3gk12")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

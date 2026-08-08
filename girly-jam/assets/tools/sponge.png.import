@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7jyscrpa4pik"
-path="res://.godot/imported/indicator.png-740da2a3433db51a7f665c61673dc201.ctex"
+uid="uid://dnf57hmvmkjdq"
+path="res://.godot/imported/sponge.png-a28419eb8189a5385eaac521637785f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/indicator.png"
-dest_files=["res://.godot/imported/indicator.png-740da2a3433db51a7f665c61673dc201.ctex"]
+source_file="res://assets/tools/sponge.png"
+dest_files=["res://.godot/imported/sponge.png-a28419eb8189a5385eaac521637785f3.ctex"]
 
 [params]
 

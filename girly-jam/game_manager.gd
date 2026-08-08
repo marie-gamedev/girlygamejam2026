@@ -4,22 +4,24 @@ extends Node2D
 
 var level: int = 1
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	await dialogues._play_dialogue(Enums.dialogue_states.KEN)
+	await dialogues.play_dialogue(Enums.dialogue_states.KEN)
 	
-	
+	'
 	while level <= 2:
 		print(level)
 		await _start_level(level)
 		level += 1
-	return get_tree().quit()
+	return get_tree().quit()'
 
 func _start_level(level: int) -> void:
-	await dialogues._play_dialogue(_get_dialogue_per_level(level))
-	# start kutschen cleaning for level
+	print("meow")
+	await dialogues.play_dialogue(get_dialogue_per_level(level))
+	# start kutschen cleaning for level and wait until kutsche abgeben mit dialogue
+	# then play finish dialoge von diesem prinzen
+	# danach start new level
 
-func _get_dialogue_per_level(level: int) -> Enums.dialogue_states:
+func get_dialogue_per_level(level: int) -> Enums.dialogue_states:
 	match level:
 		1:
 			return Enums.dialogue_states.DOMINICK
