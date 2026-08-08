@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d2jrwtc4it6da"
+path="res://.godot/imported/dominick.dialogue-9ea5ec8f17bff93357755bef1d43503e.tres"
+
+[deps]
+
+source_file="res://dialogue/dominick.dialogue"
+dest_files=["res://.godot/imported/dominick.dialogue-9ea5ec8f17bff93357755bef1d43503e.tres"]
+
+[params]
+
+defaults=true

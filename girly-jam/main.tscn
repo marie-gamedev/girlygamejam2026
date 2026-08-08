@@ -1,3 +1,12 @@
 [gd_scene format=3 uid="uid://b4l12u4up3tm2"]
 
+[ext_resource type="Script" uid="uid://ddy636gaojouq" path="res://game_manager.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://c8wunoa3kjlkn" path="res://dialogue/dialogues.tscn" id="2_0xm2m"]
+
 [node name="Node2D" type="Node2D" unique_id=1190668301]
+
+[node name="GameManager" type="Node2D" parent="." unique_id=806895744 node_paths=PackedStringArray("dialogues")]
+script = ExtResource("1_ig7tw")
+dialogues = NodePath("../Dialogues")
+
+[node name="Dialogues" parent="." unique_id=468955842 instance=ExtResource("2_0xm2m")]

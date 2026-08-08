@@ -11,11 +11,23 @@ config_version=5
 [application]
 
 config/name="GirlyJam"
+run/main_scene="uid://b4l12u4up3tm2"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+DialogueManager="*uid://c3rodes2l3gxb"
+Enums="*uid://b0rpsaky8uiyx"
+
+[dialogue_manager]
+
+runtime/balloon_path="res://dialogue/balloon.tscn"
+
 [display]
 
+window/size/viewport_width=640
+window/size/viewport_height=480
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -23,11 +35,19 @@ window/stretch/aspect="expand"
 
 project/assembly_name="GirlyJam"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
 "res://assets/": "purple"
 }
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://dialogue/julian.dialogue", "res://dialogue/ken.dialogue", "res://dialogue/dominick.dialogue")
 
 [physics]
 
