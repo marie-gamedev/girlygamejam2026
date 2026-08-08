@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ddy636gaojouq" path="res://game_manager.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c8wunoa3kjlkn" path="res://dialogue/dialogues.tscn" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://dxit0nxc58gab" path="res://assets/background.jpg" id="3_h2yge"]
 
 [node name="Node2D" type="Node2D" unique_id=1190668301]
 
@@ -10,3 +11,8 @@ script = ExtResource("1_ig7tw")
 dialogues = NodePath("../Dialogues")
 
 [node name="Dialogues" parent="." unique_id=468955842 instance=ExtResource("2_0xm2m")]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=386525730]
+position = Vector2(388, 389.00003)
+scale = Vector2(2.5519166, 2.5519168)
+texture = ExtResource("3_h2yge")

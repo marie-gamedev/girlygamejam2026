@@ -1,55 +1,62 @@
 [gd_scene format=3 uid="uid://dqcchjvc1alo6"]
 
 [ext_resource type="Script" uid="uid://bhaj6mil2p1l5" path="res://dialogue/balloon.gd" id="1_36de5"]
+[ext_resource type="Texture2D" uid="uid://c3bf1x35yobo" path="res://assets/portraits/ken.png" id="2_3fodd"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="Texture2D" uid="uid://di5x3s1ikn7ak" path="res://assets/icon.svg" id="5_0hx7h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
-bg_color = Color(0, 0, 0, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(0.329412, 0.329412, 0.329412, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri4m3"]
-bg_color = Color(0.121569, 0.121569, 0.121569, 1)
+bg_color = Color(0.9372549, 0.79607844, 0.84705883, 0.85490197)
+draw_center = false
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0.8235294, 0.36078432, 0.5647059, 0)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+shadow_color = Color(0.90588236, 0.7058824, 0.78431374, 0.58431375)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0njw"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.90588236, 0.7058824, 0.78431374, 0.8)
+draw_center = false
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(0.6, 0.6, 0.6, 1)
+border_color = Color(0.69803923, 0.2627451, 0.4627451, 0)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+shadow_color = Color(0.90588236, 0.7058824, 0.78431374, 0.6117647)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkmqt"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+bg_color = Color(0.90588236, 0.7058824, 0.78431374, 0.8666667)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.69803923, 0.2627451, 0.4627451, 0.89411765)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.90588236, 0.7058824, 0.78431374, 0.6862745)
+shadow_size = 3
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
 default_font_size = 20
@@ -103,6 +110,15 @@ _data = {
 layer = 100
 script = ExtResource("1_36de5")
 
+[node name="Portrait" type="TextureRect" parent="." unique_id=1775106335]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 150)
+offset_left = -175.0
+offset_top = -4.0
+offset_right = 509.0
+offset_bottom = 908.0001
+texture = ExtResource("2_3fodd")
+
 [node name="Balloon" type="Control" parent="." unique_id=359403728]
 unique_name_in_owner = true
 layout_mode = 3
@@ -119,17 +135,21 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -219.0
+offset_top = -208.0
+offset_right = -24.0
+offset_bottom = -7.999878
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer" unique_id=810051587]
 clip_children = 2
 layout_mode = 2
+offset_transform_position = Vector2(-13.02, 0)
 mouse_filter = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer" unique_id=1030936092]
 layout_mode = 2
+offset_transform_position = Vector2(140, 0)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer" unique_id=1428277592]
 layout_mode = 2
@@ -141,7 +161,9 @@ size_flags_horizontal = 3
 [node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=507199029]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
+self_modulate = Color(0, 0, 0, 1)
 layout_mode = 2
+offset_transform_position = Vector2(140, 0)
 mouse_filter = 1
 bbcode_enabled = true
 text = "Character"
@@ -152,6 +174,8 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+offset_transform_position = Vector2(140, 0)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Dialogue..."
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1162966119]
@@ -175,10 +199,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -9.609985
-offset_top = -35.0
-offset_right = 290.39075
-offset_bottom = 35.0
+offset_left = 52.0
+offset_top = 100.0
+offset_right = 452.0
+offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
@@ -189,7 +213,20 @@ response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.9490196, 0.54509807, 0.65882355, 1)
+theme_override_colors/font_focus_color = Color(0.86898464, 0.86898494, 0.8689852, 1)
+theme_override_colors/font_pressed_color = Color(0.86898494, 0.8689849, 0.8689849, 1)
+theme_override_colors/font_hover_color = Color(0.8431836, 0.8431839, 0.84318435, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8132577, 0.8132577, 0.81325763, 1)
+theme_override_colors/font_outline_color = Color(0.07058824, 0.07450981, 0.19215687, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 14
+theme_override_constants/icon_max_width = 30
+theme_override_font_sizes/font_size = 24
+theme_override_icons/icon = ExtResource("5_0hx7h")
 text = "Response example"
+alignment = 0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]
 unique_name_in_owner = true
