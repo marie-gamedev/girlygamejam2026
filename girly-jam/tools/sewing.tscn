@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dxkqu51t1eu2x"]
+
+[ext_resource type="PackedScene" uid="uid://2kho1fc0314n" path="res://tools/tool.tscn" id="1_wg0mi"]
+[ext_resource type="Texture2D" uid="uid://skkrql06iaaa" path="res://assets/tools/sewing.png" id="2_cgwdc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgwdc"]
+size = Vector2(189, 182.25)
+
+[node name="Sewing" unique_id=1391043698 instance=ExtResource("1_wg0mi")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=36770998]
+position = Vector2(2.5, 3)
+shape = SubResource("RectangleShape2D_cgwdc")
+
+[node name="Sprite2D" parent="." index="1" unique_id=2090715542]
+texture = ExtResource("2_cgwdc")

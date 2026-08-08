@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dq7l3c0ocybqm"]
+
+[ext_resource type="PackedScene" uid="uid://2kho1fc0314n" path="res://tools/tool.tscn" id="1_tqacx"]
+[ext_resource type="Texture2D" uid="uid://bfo4yiqjidu1s" path="res://assets/tools/towel.png" id="2_k6c5c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6c5c"]
+size = Vector2(205, 204)
+
+[node name="Towel" unique_id=1391043698 instance=ExtResource("1_tqacx")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=36770998]
+position = Vector2(-2.5, 4)
+shape = SubResource("RectangleShape2D_k6c5c")
+
+[node name="Sprite2D" parent="." index="1" unique_id=2090715542]
+texture = ExtResource("2_k6c5c")

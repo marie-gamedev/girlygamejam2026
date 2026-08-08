@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d0rji23ur8oft"]
+
+[ext_resource type="PackedScene" uid="uid://2kho1fc0314n" path="res://tools/tool.tscn" id="1_x3xu1"]
+[ext_resource type="Texture2D" uid="uid://cgjvnnnac8iqj" path="res://assets/tools/brush.png" id="2_kgsti"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgsti"]
+size = Vector2(172, 206)
+
+[node name="Brush" unique_id=1391043698 instance=ExtResource("1_x3xu1")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=36770998]
+position = Vector2(6, 0)
+shape = SubResource("RectangleShape2D_kgsti")
+
+[node name="Sprite2D" parent="." index="1" unique_id=2090715542]
+texture = ExtResource("2_kgsti")

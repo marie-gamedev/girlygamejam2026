@@ -14,7 +14,7 @@ func _process(delta):
 	if follow:
 		position = get_global_mouse_position()
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-			print("cleeaaaningg, buubbleess yeyyy")
+			print("cleeaaaningg or doing smth.. yeyyy!!!")
 
 
 #func _on_mouse_entered():

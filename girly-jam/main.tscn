@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dxit0nxc58gab" path="res://assets/background.jpg" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://c3ptfrli3w8h0" path="res://tools/sponge.tscn" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://ds08k6t2ko55h" path="res://assets/carriage.png" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://d0rji23ur8oft" path="res://tools/brush.tscn" id="7_kek77"]
+[ext_resource type="PackedScene" uid="uid://dxkqu51t1eu2x" path="res://tools/sewing.tscn" id="8_4c57u"]
+[ext_resource type="PackedScene" uid="uid://dq7l3c0ocybqm" path="res://tools/towel.tscn" id="9_efxa6"]
 
 [node name="Node2D" type="Node2D" unique_id=1190668301]
 
@@ -36,3 +39,12 @@ scale = Vector2(0.4553846, 0.4553846)
 
 [node name="Sponge" parent="World/Tools" unique_id=1176703255 instance=ExtResource("5_lquwl")]
 position = Vector2(900, 174)
+
+[node name="Brush" parent="World/Tools" unique_id=1391043698 instance=ExtResource("7_kek77")]
+position = Vector2(920, 396)
+
+[node name="Sewing" parent="World/Tools" unique_id=1962796759 instance=ExtResource("8_4c57u")]
+position = Vector2(552, 220)
+
+[node name="Towel" parent="World/Tools" unique_id=2717972 instance=ExtResource("9_efxa6")]
+position = Vector2(721, 127)
