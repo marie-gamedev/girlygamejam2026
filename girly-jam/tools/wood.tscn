@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dlxeb1urwfyfs"]
+
+[ext_resource type="PackedScene" uid="uid://cktb7yusaerjv" path="res://tools/bucket.tscn" id="1_5uqwe"]
+
+[node name="Wood" unique_id=1391043698 instance=ExtResource("1_5uqwe")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=36770998]
+position = Vector2(-3, -0.5)
+
+[node name="Sprite2D" parent="." index="1" unique_id=2090715542]
+scale = Vector2(0.07840682, 0.07840682)
+
+[node name="Label" type="Label" parent="." index="3" unique_id=1022998448]
+offset_left = -49.0
+offset_top = -12.0
+offset_right = 54.0
+offset_bottom = 11.0
+text = "Wood Bucket"

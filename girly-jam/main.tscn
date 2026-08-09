@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://d0rji23ur8oft" path="res://tools/brush.tscn" id="7_kek77"]
 [ext_resource type="PackedScene" uid="uid://dxkqu51t1eu2x" path="res://tools/sewing.tscn" id="8_4c57u"]
 [ext_resource type="PackedScene" uid="uid://dq7l3c0ocybqm" path="res://tools/towel.tscn" id="9_efxa6"]
+[ext_resource type="PackedScene" uid="uid://dajc4sxk544ng" path="res://tools/fabric.tscn" id="10_efxa6"]
+[ext_resource type="PackedScene" uid="uid://xl7j2d24f6kn" path="res://tools/metal.tscn" id="11_dg77c"]
+[ext_resource type="PackedScene" uid="uid://dlxeb1urwfyfs" path="res://tools/wood.tscn" id="12_dg77c"]
 
 [node name="Node2D" type="Node2D" unique_id=1190668301]
 
@@ -16,9 +19,8 @@
 script = ExtResource("1_ig7tw")
 dialogues = NodePath("../Dialogues")
 
-[node name="ToolsManager" type="Node2D" parent="." unique_id=1053994227 node_paths=PackedStringArray("sponge")]
+[node name="ToolsManager" type="Node2D" parent="." unique_id=1053994227]
 script = ExtResource("2_1bvp3")
-sponge = NodePath("../World/Tools/Sponge")
 
 [node name="Dialogues" parent="." unique_id=468955842 instance=ExtResource("2_0xm2m")]
 
@@ -41,13 +43,25 @@ scale = Vector2(0.4553846, 0.4553846)
 position = Vector2(900, 174)
 
 [node name="Brush" parent="World/Tools" unique_id=1391043698 instance=ExtResource("7_kek77")]
-position = Vector2(920, 396)
+position = Vector2(938, 388)
 
 [node name="Sewing" parent="World/Tools" unique_id=1962796759 instance=ExtResource("8_4c57u")]
 position = Vector2(552, 220)
 
 [node name="Towel" parent="World/Tools" unique_id=2717972 instance=ExtResource("9_efxa6")]
 position = Vector2(721, 127)
+
+[node name="Fabric" parent="World" unique_id=318050728 instance=ExtResource("10_efxa6")]
+position = Vector2(256.38153, 318.31384)
+scale = Vector2(0.3731431, 0.3731431)
+
+[node name="Metal" parent="World" unique_id=1028973642 instance=ExtResource("11_dg77c")]
+position = Vector2(335.16306, 321.5015)
+scale = Vector2(0.31379235, 0.31379235)
+
+[node name="Wood" parent="World" unique_id=965140780 instance=ExtResource("12_dg77c")]
+position = Vector2(405.2923, 320.59076)
+scale = Vector2(0.32603186, 0.32603186)
 
 [connection signal="mouse_entered" from="World/Tools/Sponge" to="World/Tools/Sponge" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="World/Tools/Sponge" to="World/Tools/Sponge" method="_on_mouse_exited"]

@@ -6,16 +6,29 @@ extends Node2D
 @export var yarn_and_needle: Tool
 
 var mode : Enums.tools_mode
+var bucket_mode : Enums.bucket_mode
 
-# Called when the node enters the scene tree for the first time.
+var follow_tool : Tool
+
 func _ready():
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if follow_tool:
+		follow_tool.position = get_global_mouse_position()
+		if follow_tool.check_particle_requirements():
+			follow_tool.toggle_particle_system(true)
+		else:
+			follow_tool.toggle_particle_system(false)
 
 func set_mode(_mode: Enums.tools_mode):
-	print("old mode = ", mode)
+	if mode == Enums.tools_mode.SPONGE && _mode == Enums.tools_mode.NONE:
+		set_bucket_mode(Enums.bucket_mode.NONE)
 	mode = _mode
-	print("new mode = ", mode)
+
+func set_bucket_mode(_mode : Enums.bucket_mode):
+	bucket_mode = _mode
+
+func deselect_old_follow_tool():
+	if follow_tool:
+		follow_tool.deselect()
