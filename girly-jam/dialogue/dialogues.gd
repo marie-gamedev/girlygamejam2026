@@ -31,9 +31,9 @@ func _ready():
 func _enter_tree() -> void:
 	DialogueSettings.set_user_value("is_running_test_scene", false)
 
-func play_dialogue(state: Enums.dialogue_states) -> void:
+func play_dialogue(state: Enums.dialogue_states, title: String) -> void:
 	var dialogue_resource = get_dialogue(state)
-	DialogueManager.show_dialogue_balloon(dialogue_resource, title if not title.is_empty() else dialogue_resource.first_title)
+	DialogueManager.show_dialogue_balloon(dialogue_resource, title)
 	
 	await DialogueManager.dialogue_ended
 

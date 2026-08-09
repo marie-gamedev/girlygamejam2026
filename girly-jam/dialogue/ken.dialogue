@@ -16,3 +16,8 @@ Kann: And the different cleaning solutions that we need for different materials 
 Kann: Now, are you ready for our first customer?
 - Yees!
 => END
+
+~ ending
+Kann: it's ovah
+- oki bye
+=> END

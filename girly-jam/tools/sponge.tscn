@@ -42,6 +42,7 @@ color_ramp = SubResource("GradientTexture1D_ntmff")
 
 [node name="StayingBubbles" type="GPUParticles2D" parent="ParticleSystem" parent_id_path=PackedInt32Array(1660493306) index="0" unique_id=870292410]
 position = Vector2(6, -73)
+emitting = false
 amount = 100
 texture = ExtResource("3_budxj")
 lifetime = 5.0
@@ -50,6 +51,7 @@ process_material = SubResource("ParticleProcessMaterial_vsiwj")
 
 [node name="MovingBubbles" type="GPUParticles2D" parent="ParticleSystem" parent_id_path=PackedInt32Array(1660493306) index="1" unique_id=2012713097]
 position = Vector2(9, -53)
+emitting = false
 amount = 20
 texture = ExtResource("2_ntmff")
 process_material = SubResource("ParticleProcessMaterial_budxj")
