@@ -1,4 +1,5 @@
-extends Node
+class_name GlobalEnums
+extends Node2D
 
 enum dialogue_states { KEN, DOMINICK, JULIAN, NICHOLAS, JEREMY, IAN}
 
