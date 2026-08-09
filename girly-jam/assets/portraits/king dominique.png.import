@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3e7k0013etrj"
-path="res://.godot/imported/king dominick.png-ea1dfdff8776271136961860aa33339a.ctex"
+path="res://.godot/imported/king dominique.png-6a77033c49a2d07f731577ba737d2151.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/king dominick.png"
-dest_files=["res://.godot/imported/king dominick.png-ea1dfdff8776271136961860aa33339a.ctex"]
+source_file="res://assets/portraits/king dominique.png"
+dest_files=["res://.godot/imported/king dominique.png-6a77033c49a2d07f731577ba737d2151.ctex"]
 
 [params]
 

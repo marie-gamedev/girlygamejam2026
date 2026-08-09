@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bycw2fbn5211l"
-path="res://.godot/imported/julian.png-cd334ed758d2c5a73e6f74990f2a3c7b.ctex"
+uid="uid://c3bf1x35yobo"
+path="res://.godot/imported/kann.png-e1d3c6e1de3c5502e7fb78e4c8a6fc91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/julian.png"
-dest_files=["res://.godot/imported/julian.png-cd334ed758d2c5a73e6f74990f2a3c7b.ctex"]
+source_file="res://assets/portraits/kann.png"
+dest_files=["res://.godot/imported/kann.png-e1d3c6e1de3c5502e7fb78e4c8a6fc91.ctex"]
 
 [params]
 
