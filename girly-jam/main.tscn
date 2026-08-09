@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://8x5ypqiff1qw" path="res://assets/tool-wall.jpg" id="6_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://ds08k6t2ko55h" path="res://assets/carriage.png" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://d0rji23ur8oft" path="res://tools/brush.tscn" id="7_kek77"]
+[ext_resource type="Texture2D" uid="uid://ebcr71444pom" path="res://assets/carriage1.png" id="7_yaehf"]
 [ext_resource type="PackedScene" uid="uid://dxkqu51t1eu2x" path="res://tools/sewing.tscn" id="8_4c57u"]
 [ext_resource type="PackedScene" uid="uid://dq7l3c0ocybqm" path="res://tools/towel.tscn" id="9_efxa6"]
 [ext_resource type="PackedScene" uid="uid://dajc4sxk544ng" path="res://tools/fabric.tscn" id="10_efxa6"]
@@ -49,11 +50,18 @@ texture = ExtResource("5_vivmo")
 
 [node name="Carriages" type="Node2D" parent="World" unique_id=1626827974]
 
-[node name="Carriage1" type="Sprite2D" parent="World/Carriages" unique_id=2008301679]
-position = Vector2(277.32922, 249.55078)
-texture = ExtResource("6_7mycd")
+[node name="Carriage1" type="Sprite2D" parent="World/Carriages" unique_id=727178159]
+position = Vector2(285.98157, 219.95076)
+scale = Vector2(0.7437694, 0.745)
+texture = ExtResource("7_yaehf")
 
-[node name="Carriage2" type="Sprite2D" parent="World/Carriages" unique_id=1594407586]
+[node name="Carriage2" type="Sprite2D" parent="World/Carriages" unique_id=285244951]
+position = Vector2(695.8277, 206.74466)
+scale = Vector2(0.7382979, 0.74074304)
+texture = ExtResource("7_yaehf")
+
+[node name="Carriage5" type="Sprite2D" parent="World/Carriages" unique_id=1594407586]
+visible = false
 position = Vector2(677.7846, 248.18462)
 texture = ExtResource("6_7mycd")
 
@@ -116,6 +124,7 @@ icon = ExtResource("13_ycdy4")
 flat = true
 
 [node name="ScreenshotButton" type="Button" parent="Control" unique_id=1701902716]
+visible = false
 layout_mode = 0
 offset_left = 784.0
 offset_top = 13.0
