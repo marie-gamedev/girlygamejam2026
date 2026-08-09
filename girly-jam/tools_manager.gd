@@ -31,4 +31,5 @@ func set_bucket_mode(_mode : Enums.bucket_mode):
 
 func deselect_old_follow_tool():
 	if follow_tool:
+		print("deselect old follow tool, mode", mode)
 		follow_tool.deselect()

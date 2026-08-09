@@ -21,8 +21,9 @@ func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			select()
-		else: if event.button_index == MOUSE_BUTTON_RIGHT:
-			deselect()
+		else:
+			if event.button_index == MOUSE_BUTTON_RIGHT:
+				deselect()
 
 func select() -> void:
 	if Enums.tools_mode[String(name).to_upper()] == ToolsManager.mode:
@@ -33,11 +34,15 @@ func select() -> void:
 	ToolsManager.set_mode(Enums.tools_mode[String(name).to_upper()])
 
 func deselect() -> void:
-	print("unselected object!")
+	print("unselected object!, mode = ", ToolsManager.mode)
+	toggle_particle_system(false)
 	position = starting_pos
+	ToolsManager.follow_tool = null
 	ToolsManager.set_mode(Enums.tools_mode.NONE)
 
 func check_particle_requirements() -> bool:
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) && ToolsManager.bucket_mode != Enums.bucket_mode.NONE:
+	if (ToolsManager.mode == Enums.tools_mode.SPONGE
+	&& Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
+	&& ToolsManager.bucket_mode != Enums.bucket_mode.NONE):
 		return true
 	return false
