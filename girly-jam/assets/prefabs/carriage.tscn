@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://botfqukrepi4o"]
 
-[ext_resource type="Script" uid="uid://df2u1xd8e6ds8" path="res://assets/cleaning/cleaning_controller.gd" id="1_pr7i2"]
+[ext_resource type="Script" uid="uid://debkcrwa0p5nk" path="res://assets/cleaning/carriage.gd" id="1_523sg"]
 [ext_resource type="PackedScene" uid="uid://dmwwcw5kjqa15" path="res://assets/cleaning/carriage_material.tscn" id="2_mfgdk"]
 
-[node name="Carriage" type="Node2D" unique_id=575866561]
-
-[node name="CleaningController" type="Node2D" parent="." unique_id=2068139391 node_paths=PackedStringArray("layers")]
-script = ExtResource("1_pr7i2")
-layers = [NodePath("../Wood"), NodePath("../Metal"), NodePath("../Fabric")]
+[node name="Carriage" type="Node2D" unique_id=575866561 node_paths=PackedStringArray("layers")]
+script = ExtResource("1_523sg")
+layers = [NodePath("Wood"), NodePath("Metal"), NodePath("Fabric")]
 
 [node name="Wood" parent="." unique_id=830940108 instance=ExtResource("2_mfgdk")]
 position = Vector2(-145, 96)

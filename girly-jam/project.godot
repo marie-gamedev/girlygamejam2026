@@ -20,6 +20,7 @@ config/icon="res://assets/icon.svg"
 DialogueManager="*uid://c3rodes2l3gxb"
 Enums="*uid://b0rpsaky8uiyx"
 ToolsManager="*uid://bht1xfc28yodc"
+EventBus="*uid://boq3veqg1ddg8"
 
 [dialogue_manager]
 

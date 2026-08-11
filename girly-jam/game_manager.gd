@@ -1,9 +1,11 @@
+class_name GameManager
 extends Node2D
 
 @export var dialogues: BaseDialogue
 @onready var finish_wash_button = $"../Control/FinishWashButton"
 @onready var inbetween_level_timer = $InbetweenLevelTimer
-@onready var carriages = $"../World/Carriages"
+@onready var carriages: Node = $"../World/Carriages"
+var carriage_list: Array[Carriage] = []
 
 var level: int = 1
 
@@ -12,11 +14,17 @@ var game_state : Enums.game_state = Enums.game_state.START:
 		if game_state == value:
 			return
 		game_state = value
-		game_state_changed.emit(game_state)
+		EventBus.game_state_changed.emit(game_state, level)
 
-signal game_state_changed(new_state: Enums.game_state)
+signal game_state_changed(new_state: Enums.game_state, current_level : int)
 
-func _ready():
+func _ready():	
+	carriage_list.clear()
+	for i in carriages.get_child_count():
+		var carriage: Carriage = carriages.get_child(i) as Carriage
+		if carriage:
+			carriage_list.append(carriage)
+	
 	carriages.position = Vector2(400,0)
 	
 	await dialogues.play_dialogue(Enums.dialogue_states.KEN, "start")
@@ -51,7 +59,7 @@ func _start_level(level: int) -> void:
 	# -> next level
 
 func set_game_state(target_state: Enums.game_state) -> void:
-	print("current game_state = ", game_state, " -> new game_state = ", target_state)
+	print("current game_state = %s -> new game_state = %s" % [Enums.game_state.keys()[game_state], Enums.game_state.keys()[target_state]])
 	game_state = target_state
 
 func _process(delta):
@@ -82,11 +90,10 @@ func get_dialogue_per_level(level: int) -> Enums.dialogue_states:
 
 func wait_for_game_state(target_state: Enums.game_state) -> void:
 	while game_state != target_state:
-		await game_state_changed
+		await EventBus.game_state_changed
 
 func _on_finish_wash_button_pressed():
 	set_game_state(Enums.game_state.POSTDIALOGUE)
-
 
 func _on_inbetween_level_timer_timeout():
 	set_game_state(Enums.game_state.PREDIALOGUE)

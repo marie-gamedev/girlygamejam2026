@@ -2,8 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://botfqukrepi4o" path="res://assets/prefabs/carriage.tscn" id="1_tssad"]
 [ext_resource type="Script" uid="uid://h0k273chdaxl" path="res://assets/cleaning/change_tool.gd" id="3_4r0ra"]
+[ext_resource type="Script" uid="uid://df2u1xd8e6ds8" path="res://assets/cleaning/cleaning_controller.gd" id="3_58chk"]
 
 [node name="DirtScene" type="Node2D" unique_id=754762796]
+
+[node name="CleaningController" type="Node2D" parent="." unique_id=1737959294 node_paths=PackedStringArray("test_init_carriage")]
+script = ExtResource("3_58chk")
+test_init_carriage = NodePath("../Carriage")
 
 [node name="Carriage" parent="." unique_id=575866561 instance=ExtResource("1_tssad")]
 position = Vector2(503, 362)
@@ -20,7 +25,7 @@ offset_bottom = 41.0
 text = "Wood"
 script = ExtResource("3_4r0ra")
 tool_type = 1
-cleaning_controller = NodePath("../../Carriage/CleaningController")
+cleaning_controller = NodePath("../../CleaningController")
 
 [node name="MetalButton" type="Button" parent="TestUI" unique_id=1912596498 node_paths=PackedStringArray("cleaning_controller")]
 offset_left = 70.0
@@ -31,7 +36,7 @@ text = "Metal
 "
 script = ExtResource("3_4r0ra")
 tool_type = 2
-cleaning_controller = NodePath("../../Carriage/CleaningController")
+cleaning_controller = NodePath("../../CleaningController")
 
 [node name="FabricButton" type="Button" parent="TestUI" unique_id=1233805645 node_paths=PackedStringArray("cleaning_controller")]
 offset_left = 134.0
@@ -41,7 +46,7 @@ offset_bottom = 40.0
 text = "Fabric"
 script = ExtResource("3_4r0ra")
 tool_type = 3
-cleaning_controller = NodePath("../../Carriage/CleaningController")
+cleaning_controller = NodePath("../../CleaningController")
 
 [editable path="Carriage"]
 [editable path="Carriage/Wood"]
