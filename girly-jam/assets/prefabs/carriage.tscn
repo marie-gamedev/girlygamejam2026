@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://botfqukrepi4o"]
+
+[ext_resource type="Script" uid="uid://df2u1xd8e6ds8" path="res://assets/cleaning/cleaning_controller.gd" id="1_pr7i2"]
+[ext_resource type="PackedScene" uid="uid://dmwwcw5kjqa15" path="res://assets/cleaning/carriage_material.tscn" id="2_mfgdk"]
+
+[node name="Carriage" type="Node2D" unique_id=575866561]
+
+[node name="CleaningController" type="Node2D" parent="." unique_id=2068139391 node_paths=PackedStringArray("layers")]
+script = ExtResource("1_pr7i2")
+layers = [NodePath("../Wood"), NodePath("../Metal"), NodePath("../Fabric")]
+
+[node name="Wood" parent="." unique_id=830940108 instance=ExtResource("2_mfgdk")]
+position = Vector2(-145, 96)
+material_type = 1
+
+[node name="Metal" parent="." unique_id=1897144016 instance=ExtResource("2_mfgdk")]
+position = Vector2(-155, -140)
+material_type = 2
+
+[node name="CarriageTex" parent="Metal" index="0" unique_id=1146933715]
+modulate = Color(0.4813621, 0.4869336, 0.47477323, 1)
+
+[node name="Fabric" parent="." unique_id=2123264892 instance=ExtResource("2_mfgdk")]
+position = Vector2(188, 192)
+material_type = 3
+
+[node name="CarriageTex" parent="Fabric" index="0" unique_id=1146933715]
+modulate = Color(0.86421007, 0.3276653, 0.61473125, 1)
+
+[editable path="Wood"]
+[editable path="Metal"]
+[editable path="Fabric"]

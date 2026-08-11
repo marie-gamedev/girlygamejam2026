@@ -10,3 +10,6 @@ offset_top = -12.0
 offset_right = 54.0
 offset_bottom = 11.0
 text = "Fabric Bucket"
+
+[node name="Color Blob" parent="." index="5" unique_id=1416029438]
+modulate = Color(0.42352942, 1, 0.67058825, 1)

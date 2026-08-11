@@ -16,3 +16,6 @@ offset_top = -12.0
 offset_right = 54.0
 offset_bottom = 11.0
 text = "Wood Bucket"
+
+[node name="Color Blob" parent="." index="5" unique_id=1416029438]
+modulate = Color(0.84920835, 0.43163195, 0.5587264, 1)

@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://cktb7yusaerjv"]
 
 [ext_resource type="Script" uid="uid://dgbyxkhdk6yao" path="res://tools/bucket.gd" id="2_hrbcy"]
+[ext_resource type="Texture2D" uid="uid://l377s21m01oi" path="res://assets/textures/blob.png" id="3_gys14"]
 [ext_resource type="Texture2D" uid="uid://duuspjqofpajt" path="res://assets/tools/bucket_placeholder.png" id="3_so05j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gys14"]
 size = Vector2(197, 159)
 
-[node name="Bucket" type="Area2D" unique_id=1391043698 node_paths=PackedStringArray("particle_system")]
+[node name="Bucket" type="Area2D" unique_id=1391043698 node_paths=PackedStringArray("particle_system", "color_identifier")]
 script = ExtResource("2_hrbcy")
 particle_system = NodePath("ParticleSystem")
+color_identifier = NodePath("Color Blob")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=36770998]
 shape = SubResource("RectangleShape2D_gys14")
@@ -24,6 +26,11 @@ position = Vector2(-8, 56)
 [node name="Timer" type="Timer" parent="." unique_id=1288343409]
 wait_time = 5.0
 one_shot = true
+
+[node name="Color Blob" type="Sprite2D" parent="." unique_id=1416029438]
+position = Vector2(33, 41.000004)
+scale = Vector2(0.08573173, 0.08573173)
+texture = ExtResource("3_gys14")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -7,6 +7,7 @@
 size = Vector2(189, 182.25)
 
 [node name="Sewing" unique_id=1391043698 instance=ExtResource("1_wg0mi")]
+type = 4
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=36770998]
 position = Vector2(2.5, 3)

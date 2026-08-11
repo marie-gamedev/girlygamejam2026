@@ -2,6 +2,7 @@ class_name Bucket extends Node2D
 
 @export var particle_system: Node2D
 @onready var timer = $Timer
+@export var color_identifier : CanvasItem # getting color to tint sponge
 
 func _ready():
 	toggle_particle_system(false)
@@ -22,7 +23,7 @@ func toggle_particle_system(toggle: bool) -> void:
 
 func _on_area_entered(area):
 	if ToolsManager.mode == Enums.tools_mode.SPONGE:
-		ToolsManager.set_bucket_mode(Enums.bucket_mode[String(name).to_upper()])
+		ToolsManager.set_bucket_mode(Enums.bucket_mode[String(name).to_upper()], color_identifier.modulate)
 		print("timer wait time = ", timer.wait_time)
 		timer.start()
 

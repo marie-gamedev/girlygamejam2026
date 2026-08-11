@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ddy636gaojouq" path="res://game_manager.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c8wunoa3kjlkn" path="res://dialogue/dialogues.tscn" id="2_0xm2m"]
-[ext_resource type="Script" uid="uid://bht1xfc28yodc" path="res://tools_manager.gd" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dxit0nxc58gab" path="res://assets/background.jpg" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://c3ptfrli3w8h0" path="res://tools/sponge.tscn" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://b2k684vr0gr7v" path="res://assets/stone-floor.png" id="5_vivmo"]
@@ -27,9 +26,6 @@ dialogues = NodePath("../Dialogues")
 [node name="InbetweenLevelTimer" type="Timer" parent="GameManager" unique_id=386911362]
 wait_time = 5.0
 one_shot = true
-
-[node name="ToolsManager" type="Node2D" parent="." unique_id=1053994227]
-script = ExtResource("2_1bvp3")
 
 [node name="Dialogues" parent="." unique_id=468955842 instance=ExtResource("2_0xm2m")]
 

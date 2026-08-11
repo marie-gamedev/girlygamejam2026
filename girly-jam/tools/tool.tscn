@@ -6,9 +6,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gk12"]
 size = Vector2(142, 182.25)
 
-[node name="Tool" type="Area2D" unique_id=1391043698 node_paths=PackedStringArray("particle_system")]
+[node name="Tool" type="Area2D" unique_id=1391043698 node_paths=PackedStringArray("particle_system", "sprite")]
 script = ExtResource("1_f6vxs")
 particle_system = NodePath("ParticleSystem")
+sprite = NodePath("Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=36770998]
 position = Vector2(3, 3)

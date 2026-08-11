@@ -1,9 +1,6 @@
 extends Node2D
 
-@export var sponge: Tool
-@export var towel: Tool
-@export var brush: Tool
-@export var yarn_and_needle: Tool
+var _tools: Dictionary = {} # ToolType -> Tool
 
 var mode : Enums.tools_mode
 var bucket_mode : Enums.bucket_mode
@@ -26,10 +23,20 @@ func set_mode(_mode: Enums.tools_mode):
 		set_bucket_mode(Enums.bucket_mode.NONE)
 	mode = _mode
 
-func set_bucket_mode(_mode : Enums.bucket_mode):
+func set_bucket_mode(_mode : Enums.bucket_mode, color : Color = Color.WHITE):
+	if _mode == Enums.bucket_mode.NONE:
+		assert(color == Color.WHITE, "ummm tool should not get tintet when bucket mode is set to none")
 	bucket_mode = _mode
+	_tools[GlobalEnums.tools_mode.SPONGE].tint_tool(color)
 
 func deselect_old_follow_tool():
 	if follow_tool:
 		print("deselect old follow tool, mode", mode)
 		follow_tool.deselect()
+
+func register_tool(tool: Tool) -> void:
+	assert(!_tools.has(tool.type), "uh oh tool " + Enums.tools_mode.keys()[tool.type] + "already exists in tool manager")
+	_tools[tool.type] = tool
+
+func get_tool(type: GlobalEnums.tools_mode) -> Tool:
+	return _tools.get(type, null)
