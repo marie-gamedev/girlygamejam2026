@@ -45,7 +45,7 @@ func _on_layer_percentage_changed(material_type: Enums.bucket_mode, percent: flo
 
 func _on_game_state_changed(new_state: Enums.game_state, current_level: int) -> void:
 	if new_state == GlobalEnums.game_state.WASH:
-		_set_carriage(game_manager.carriage_list[current_level])
+		_set_carriage(game_manager.carriage_list[current_level - 1])
 	else:
 		_unset_carriage()
 		pressed = false # idk if needed but better be safe

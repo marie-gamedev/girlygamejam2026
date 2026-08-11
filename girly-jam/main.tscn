@@ -57,7 +57,7 @@ position = Vector2(289.16922, 183.0646)
 scale = Vector2(0.3202601, 0.32079)
 
 [node name="Carriage4" parent="World/Carriages" unique_id=1301501564 instance=ExtResource("5_yaehf")]
-position = Vector2(289.16922, 183.0646)
+position = Vector2(717.2307, 195.8154)
 scale = Vector2(0.3202601, 0.32079)
 
 [node name="Carriage1" type="Sprite2D" parent="World/Carriages" unique_id=727178159]
