@@ -49,7 +49,7 @@ func set_tool(tool: Enums.bucket_mode) -> void: # only used in test scene
 	ToolsManager.bucket_mode = tool
 
 func _on_layer_percentage_changed(material_type: Enums.bucket_mode, tool_type : Enums.tools_mode, percent: float) -> void:
-	print("%s: %.1f%% dirty remaining" % [Enums.bucket_mode.keys()[material_type], percent])
+	print("%s, %s: %.1f%% dirty remaining" % [Enums.bucket_mode.keys()[material_type], Enums.tools_mode.keys()[tool_type], percent])
 	# TODO UI here, e.g. update progress bar per material
 	pass
 

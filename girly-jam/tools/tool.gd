@@ -12,16 +12,13 @@ func _ready():
 	starting_pos = position
 	toggle_particle_system(false)
 
-func _process(delta):
-	pass
-
 func toggle_particle_system(toggle: bool) -> void:
 	if get_child_count() == 0:
 		return
 	for ps in particle_system.get_children():
 		ps.emitting = toggle
 
-func _on_input_event(viewport, event, shape_idx):
+func _on_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			select()

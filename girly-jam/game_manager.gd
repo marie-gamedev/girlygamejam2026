@@ -42,7 +42,8 @@ func _ready():
 	
 	return get_tree().quit()
 
-func _start_level(level: int) -> void:
+func _start_level(lvl: int) -> void:
+	level = lvl
 	await dialogues.play_dialogue(get_dialogue_per_level(level), "start")
 	
 	# start kutschen cleaning for level and wait until kutsche abgeben mit dialogue
@@ -62,9 +63,6 @@ func set_game_state(target_state: Enums.game_state) -> void:
 	print("current game_state = %s -> new game_state = %s" % [Enums.game_state.keys()[game_state], Enums.game_state.keys()[target_state]])
 	game_state = target_state
 
-func _process(delta):
-	pass
-
 func move_carriage(to_level: int) -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_property(carriages, "position", get_next_carriage_pos(to_level), inbetween_level_timer.wait_time);
@@ -79,8 +77,8 @@ func get_next_carriage_pos(_level: int) -> Vector2:
 		_:
 			return Vector2(-800, 0)
 
-func get_dialogue_per_level(level: int) -> Enums.dialogue_states:
-	match level:
+func get_dialogue_per_level(lvl: int) -> Enums.dialogue_states:
+	match lvl:
 		1:
 			return Enums.dialogue_states.DOMINICK
 		2:

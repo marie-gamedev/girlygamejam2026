@@ -10,7 +10,7 @@ var follow_tool : Tool
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
+func _process(_delta):
 	if follow_tool:
 		follow_tool.position = get_global_mouse_position()
 		if follow_tool.check_particle_requirements():
@@ -28,6 +28,7 @@ func set_bucket_mode(_mode : Enums.bucket_mode, color : Color = Color.WHITE):
 	if _mode == Enums.bucket_mode.NONE:
 		assert(color == Color.WHITE, "ummm tool should not get tinted when bucket mode is set to none")
 	bucket_mode = _mode
+	print("bucket_mode = %s" % GlobalEnums.bucket_mode.keys()[ToolsManager.bucket_mode])
 	_tools[GlobalEnums.tools_mode.SPONGE].tint_tool(color)
 
 func deselect_old_follow_tool():

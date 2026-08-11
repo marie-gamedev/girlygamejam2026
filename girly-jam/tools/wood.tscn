@@ -7,6 +7,7 @@
 size = Vector2(56.521744, 60.869568)
 
 [node name="Wood" unique_id=1391043698 instance=ExtResource("1_5uqwe")]
+type = 1
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=36770998]
 position = Vector2(-3.0434816, 0)
