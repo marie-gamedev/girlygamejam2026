@@ -8,6 +8,7 @@
 size = Vector2(197, 159)
 
 [node name="Bucket" type="Area2D" unique_id=1391043698 node_paths=PackedStringArray("particle_system", "color_identifier")]
+scale = Vector2(1.15, 1.15)
 script = ExtResource("2_hrbcy")
 particle_system = NodePath("ParticleSystem")
 color_identifier = NodePath("Color Blob")
@@ -17,7 +18,6 @@ shape = SubResource("RectangleShape2D_gys14")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2090715542]
 position = Vector2(1.9073486e-06, 0)
-scale = Vector2(0.08041083, 0.08041082)
 texture = ExtResource("3_so05j")
 
 [node name="ParticleSystem" type="Node2D" parent="." unique_id=1660493306]

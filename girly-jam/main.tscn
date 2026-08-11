@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c3ptfrli3w8h0" path="res://tools/sponge.tscn" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://b2k684vr0gr7v" path="res://assets/stone-floor.png" id="5_vivmo"]
 [ext_resource type="PackedScene" uid="uid://botfqukrepi4o" path="res://assets/prefabs/carriage.tscn" id="5_yaehf"]
-[ext_resource type="Texture2D" uid="uid://8x5ypqiff1qw" path="res://assets/tool-wall.jpg" id="6_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://ds08k6t2ko55h" path="res://assets/carriage.png" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://qmcoefgn4a5h" path="res://assets/carriages/princesspauper/carriage_princess_pauper.tscn" id="6_cegan"]
 [ext_resource type="PackedScene" uid="uid://d0rji23ur8oft" path="res://tools/brush.tscn" id="7_kek77"]
@@ -19,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dlxeb1urwfyfs" path="res://tools/wood.tscn" id="12_dg77c"]
 [ext_resource type="Texture2D" uid="uid://cgukefc20wbde" path="res://assets/cozy_ui/Assets/Buttons/Task.png" id="13_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://lcwspfa4m1ck" path="res://assets/cozy_ui/Assets/Buttons/Camera.png" id="14_w48qg"]
+[ext_resource type="Texture2D" uid="uid://bps5a0hjcnwhj" path="res://assets/cleaning/tool_shed.png" id="15_82xsv"]
 
 [node name="Node2D" type="Node2D" unique_id=1190668301]
 
@@ -88,40 +88,38 @@ texture = ExtResource("6_7mycd")
 [node name="Tools" type="Node2D" parent="World" unique_id=1419158990]
 scale = Vector2(0.4553846, 0.4553846)
 
-[node name="ToolWall" type="Sprite2D" parent="World/Tools" unique_id=1775548600]
-position = Vector2(-141.99992, 569.31244)
-scale = Vector2(0.17501579, 0.17101306)
-texture = ExtResource("6_2cqfq")
+[node name="ToolShed" type="Sprite2D" parent="World/Tools" unique_id=168591242]
+position = Vector2(164, 486)
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("15_82xsv")
+
+[node name="Buckets" type="Node2D" parent="World/Tools" unique_id=1439607084]
+
+[node name="Metal" parent="World/Tools/Buckets" unique_id=1028973642 instance=ExtResource("11_dg77c")]
+position = Vector2(48, 678)
+
+[node name="Fabric" parent="World/Tools/Buckets" unique_id=318050728 instance=ExtResource("10_efxa6")]
+position = Vector2(43, 716)
+
+[node name="Wood" parent="World/Tools/Buckets" unique_id=965140780 instance=ExtResource("12_dg77c")]
+position = Vector2(117, 683)
 
 [node name="Sponge" parent="World/Tools" unique_id=1176703255 instance=ExtResource("5_lquwl")]
-position = Vector2(188, 380)
+position = Vector2(272, 366)
 scale = Vector2(0.64305025, 0.64305025)
 
 [node name="Brush" parent="World/Tools" unique_id=1391043698 instance=ExtResource("7_kek77")]
+visible = false
 position = Vector2(187.99998, 516)
 scale = Vector2(0.4904834, 0.4904834)
 
 [node name="Sewing" parent="World/Tools" unique_id=1962796759 instance=ExtResource("8_4c57u")]
-position = Vector2(78, 381.00003)
+position = Vector2(213, 489.00003)
 scale = Vector2(0.5059286, 0.5059286)
 
 [node name="Towel" parent="World/Tools" unique_id=2717972 instance=ExtResource("9_efxa6")]
-position = Vector2(85, 513)
+position = Vector2(266, 598)
 scale = Vector2(0.4777976, 0.4777976)
-
-[node name="Buckets" type="Node2D" parent="World/Tools" unique_id=1439607084]
-
-[node name="Fabric" parent="World/Tools/Buckets" unique_id=318050728 instance=ExtResource("10_efxa6")]
-position = Vector2(82, 698)
-scale = Vector2(0.8194021, 0.8194021)
-
-[node name="Metal" parent="World/Tools/Buckets" unique_id=1028973642 instance=ExtResource("11_dg77c")]
-position = Vector2(254.99997, 704.99994)
-scale = Vector2(0.68907106, 0.68907106)
-
-[node name="Wood" parent="World/Tools/Buckets" unique_id=965140780 instance=ExtResource("12_dg77c")]
-position = Vector2(408.99994, 703)
-scale = Vector2(0.71594834, 0.71594834)
 
 [node name="Control" type="Control" parent="." unique_id=500166893]
 layout_mode = 3

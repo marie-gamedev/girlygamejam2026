@@ -1,15 +1,30 @@
 [gd_scene format=3 uid="uid://dajc4sxk544ng"]
 
 [ext_resource type="PackedScene" uid="uid://cktb7yusaerjv" path="res://tools/bucket.tscn" id="1_suhbd"]
+[ext_resource type="Texture2D" uid="uid://bx2mjaejid78o" path="res://assets/tools/bucket_fabric.png" id="2_rbpi7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbpi7"]
+size = Vector2(54.782608, 41.739132)
 
 [node name="Fabric" unique_id=1391043698 instance=ExtResource("1_suhbd")]
 
+[node name="CollisionShape2D" parent="." index="0" unique_id=36770998]
+position = Vector2(0.43478593, -1.7391305)
+shape = SubResource("RectangleShape2D_rbpi7")
+
+[node name="Sprite2D" parent="." index="1" unique_id=2090715542]
+position = Vector2(105.21739, -202.6087)
+texture = ExtResource("2_rbpi7")
+
 [node name="Label" type="Label" parent="." index="3" unique_id=825270092]
+visible = false
 offset_left = -49.0
 offset_top = -12.0
-offset_right = 54.0
+offset_right = 56.0
 offset_bottom = 11.0
 text = "Fabric Bucket"
 
 [node name="Color Blob" parent="." index="5" unique_id=1416029438]
 modulate = Color(0.42352942, 1, 0.67058825, 1)
+position = Vector2(11.304349, 0)
+scale = Vector2(0.028506072, 0.028506074)

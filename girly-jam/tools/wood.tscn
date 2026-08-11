@@ -1,16 +1,23 @@
 [gd_scene format=3 uid="uid://dlxeb1urwfyfs"]
 
 [ext_resource type="PackedScene" uid="uid://cktb7yusaerjv" path="res://tools/bucket.tscn" id="1_5uqwe"]
+[ext_resource type="Texture2D" uid="uid://buvm0eqlpvfaj" path="res://assets/tools/bucket_wood.png" id="2_rujko"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rujko"]
+size = Vector2(56.521744, 60.869568)
 
 [node name="Wood" unique_id=1391043698 instance=ExtResource("1_5uqwe")]
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=36770998]
-position = Vector2(-3, -0.5)
+position = Vector2(-3.0434816, 0)
+shape = SubResource("RectangleShape2D_rujko")
 
 [node name="Sprite2D" parent="." index="1" unique_id=2090715542]
-scale = Vector2(0.07840682, 0.07840682)
+position = Vector2(46.08696, -174.78261)
+texture = ExtResource("2_rujko")
 
 [node name="Label" type="Label" parent="." index="3" unique_id=1022998448]
+visible = false
 offset_left = -49.0
 offset_top = -12.0
 offset_right = 54.0
@@ -19,3 +26,5 @@ text = "Wood Bucket"
 
 [node name="Color Blob" parent="." index="5" unique_id=1416029438]
 modulate = Color(0.84920835, 0.43163195, 0.5587264, 1)
+position = Vector2(1.73913, 9.565222)
+scale = Vector2(0.041483846, 0.041549202)

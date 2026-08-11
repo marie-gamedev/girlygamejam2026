@@ -1,10 +1,23 @@
 [gd_scene format=3 uid="uid://xl7j2d24f6kn"]
 
 [ext_resource type="PackedScene" uid="uid://cktb7yusaerjv" path="res://tools/bucket.tscn" id="1_7h73r"]
+[ext_resource type="Texture2D" uid="uid://n6j1aqx50ulh" path="res://assets/tools/bucket_metal.png" id="2_tkfg4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkfg4"]
+size = Vector2(62.608704, 83.478264)
 
 [node name="Metal" unique_id=1391043698 instance=ExtResource("1_7h73r")]
 
+[node name="CollisionShape2D" parent="." index="0" unique_id=36770998]
+position = Vector2(0, -1.7391322)
+shape = SubResource("RectangleShape2D_tkfg4")
+
+[node name="Sprite2D" parent="." index="1" unique_id=2090715542]
+position = Vector2(101.739136, -172.17392)
+texture = ExtResource("2_tkfg4")
+
 [node name="Label" type="Label" parent="." index="3" unique_id=1339615601]
+visible = false
 offset_left = -49.0
 offset_top = -12.0
 offset_right = 54.0
@@ -13,3 +26,5 @@ text = "Metal Bucket"
 
 [node name="Color Blob" parent="." index="5" unique_id=1416029438]
 modulate = Color(0.38924345, 0.54537535, 0.9292096, 1)
+position = Vector2(3.4782581, 11.304352)
+scale = Vector2(0.058900964, 0.05199185)
