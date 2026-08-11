@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://qmcoefgn4a5h"]
+
+[ext_resource type="PackedScene" uid="uid://botfqukrepi4o" path="res://assets/prefabs/carriage.tscn" id="1_xqiif"]
+[ext_resource type="Texture2D" uid="uid://cxd2umpks8sf3" path="res://assets/carriages/princesspauper/wood.png" id="2_gihob"]
+[ext_resource type="Texture2D" uid="uid://dewjrxix4qk2r" path="res://assets/carriages/princesspauper/metal.png" id="3_knt3r"]
+[ext_resource type="Texture2D" uid="uid://b2xvyv66v7rc" path="res://assets/carriages/princesspauper/fabric.png" id="4_j5fyc"]
+
+[node name="Carriage_Princess_Pauper" unique_id=575866561 instance=ExtResource("1_xqiif")]
+
+[node name="CarriageTex" parent="Wood" parent_id_path=PackedInt32Array(830940108) index="0" unique_id=1146933715]
+texture = ExtResource("2_gihob")
+
+[node name="CarriageTex" parent="Metal" parent_id_path=PackedInt32Array(1897144016) index="0" unique_id=1146933715]
+texture = ExtResource("3_knt3r")
+
+[node name="CarriageTex" parent="Fabric" parent_id_path=PackedInt32Array(2123264892) index="0" unique_id=1146933715]
+texture = ExtResource("4_j5fyc")
+
+[editable path="Wood"]
+[editable path="Metal"]
+[editable path="Fabric"]
