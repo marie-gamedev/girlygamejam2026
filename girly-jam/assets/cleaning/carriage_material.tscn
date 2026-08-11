@@ -17,7 +17,6 @@ dirt_sprite = NodePath("DirtTex")
 car_sprite = NodePath("CarriageTex")
 
 [node name="CarriageTex" type="Sprite2D" parent="." unique_id=1146933715]
-modulate = Color(0.56115377, 0.3389853, 0.1428645, 1)
 texture = ExtResource("1_3q333")
 
 [node name="DirtTex" type="Sprite2D" parent="." unique_id=1473268579]

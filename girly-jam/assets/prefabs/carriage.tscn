@@ -17,14 +17,8 @@ material_type = 1
 [node name="Metal" parent="." unique_id=1897144016 instance=ExtResource("2_mfgdk")]
 material_type = 2
 
-[node name="CarriageTex" parent="Metal" index="0" unique_id=1146933715]
-modulate = Color(0.4813621, 0.4869336, 0.47477323, 1)
-
 [node name="Fabric" parent="." unique_id=2123264892 instance=ExtResource("2_mfgdk")]
 material_type = 3
-
-[node name="CarriageTex" parent="Fabric" index="0" unique_id=1146933715]
-modulate = Color(0.86421007, 0.3276653, 0.61473125, 1)
 
 [editable path="Wood"]
 [editable path="Metal"]

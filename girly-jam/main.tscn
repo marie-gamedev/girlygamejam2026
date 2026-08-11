@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://botfqukrepi4o" path="res://assets/prefabs/carriage.tscn" id="5_yaehf"]
 [ext_resource type="Texture2D" uid="uid://8x5ypqiff1qw" path="res://assets/tool-wall.jpg" id="6_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://ds08k6t2ko55h" path="res://assets/carriage.png" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://qmcoefgn4a5h" path="res://assets/carriages/princesspauper/carriage_princess_pauper.tscn" id="6_cegan"]
 [ext_resource type="PackedScene" uid="uid://d0rji23ur8oft" path="res://tools/brush.tscn" id="7_kek77"]
 [ext_resource type="Texture2D" uid="uid://ebcr71444pom" path="res://assets/carriage1.png" id="7_yaehf"]
 [ext_resource type="PackedScene" uid="uid://dxkqu51t1eu2x" path="res://tools/sewing.tscn" id="8_4c57u"]
@@ -52,12 +53,16 @@ texture = ExtResource("5_vivmo")
 
 [node name="Carriages" type="Node2D" parent="World" unique_id=1626827974]
 
-[node name="Carriage" parent="World/Carriages" unique_id=575866561 instance=ExtResource("5_yaehf")]
-position = Vector2(289.16922, 183.0646)
+[node name="Carriage_Princess_Pauper" parent="World/Carriages" unique_id=575866561 instance=ExtResource("6_cegan")]
+position = Vector2(288.71384, 206.74461)
+scale = Vector2(0.7977114, 0.7977114)
+
+[node name="Carriage" parent="World/Carriages" unique_id=1787856184 instance=ExtResource("5_yaehf")]
+position = Vector2(787.36, 214.03078)
 scale = Vector2(0.3202601, 0.32079)
 
 [node name="Carriage4" parent="World/Carriages" unique_id=1301501564 instance=ExtResource("5_yaehf")]
-position = Vector2(717.2307, 195.8154)
+position = Vector2(1215.4215, 226.78157)
 scale = Vector2(0.3202601, 0.32079)
 
 [node name="Carriage1" type="Sprite2D" parent="World/Carriages" unique_id=727178159]
