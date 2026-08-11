@@ -27,6 +27,7 @@ script = ExtResource("1_074og")
 game_manager = NodePath("../GameManager")
 
 [node name="GameManager" type="Node2D" parent="." unique_id=806895744 node_paths=PackedStringArray("dialogues")]
+position = Vector2(4, 0)
 script = ExtResource("1_ig7tw")
 dialogues = NodePath("../Dialogues")
 

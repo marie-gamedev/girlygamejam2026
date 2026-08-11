@@ -22,10 +22,11 @@ func set_mode(_mode: Enums.tools_mode):
 	if mode == Enums.tools_mode.SPONGE && _mode == Enums.tools_mode.NONE:
 		set_bucket_mode(Enums.bucket_mode.NONE)
 	mode = _mode
+	print("mode is now %s" % GlobalEnums.tools_mode.keys()[_mode])
 
 func set_bucket_mode(_mode : Enums.bucket_mode, color : Color = Color.WHITE):
 	if _mode == Enums.bucket_mode.NONE:
-		assert(color == Color.WHITE, "ummm tool should not get tintet when bucket mode is set to none")
+		assert(color == Color.WHITE, "ummm tool should not get tinted when bucket mode is set to none")
 	bucket_mode = _mode
 	_tools[GlobalEnums.tools_mode.SPONGE].tint_tool(color)
 
