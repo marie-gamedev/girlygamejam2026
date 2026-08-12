@@ -22,31 +22,17 @@ position = Vector2(-182, -124)
 [node name="CarriageTex" parent="Carriage/Wood" index="0" unique_id=1146933715]
 modulate = Color(0.61563134, 0.37712732, 0.20543918, 1)
 
-[node name="ExtraTex" parent="Carriage/Wood" index="3" unique_id=649079568]
-visible = false
-brush_radius = 50.0
-brush_strength = 0.2
-percentage_update_interval = 0.2
-
 [node name="Metal" parent="Carriage" index="2" unique_id=1897144016]
 position = Vector2(189, 168)
 
 [node name="CarriageTex" parent="Carriage/Metal" index="0" unique_id=1146933715]
 modulate = Color(0.42365062, 0.42365065, 0.42365062, 1)
 
-[node name="ExtraTex" parent="Carriage/Metal" index="3" unique_id=649079568]
-material_type = 2
-required_tool = 2
-
 [node name="Fabric" parent="Carriage" index="3" unique_id=2123264892]
 position = Vector2(-167, 132)
 
 [node name="CarriageTex" parent="Carriage/Fabric" index="0" unique_id=1146933715]
 modulate = Color(1, 0.5529412, 1, 1)
-
-[node name="ExtraTex" parent="Carriage/Fabric" index="3" unique_id=649079568]
-material_type = 3
-required_tool = 4
 
 [node name="TestUI" type="Node2D" parent="." unique_id=991085996]
 

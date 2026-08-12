@@ -18,7 +18,7 @@ var game_state : Enums.game_state = Enums.game_state.START:
 
 signal game_state_changed(new_state: Enums.game_state, current_level : int)
 
-func _ready():	
+func _ready() -> void:	
 	carriage_list.clear()
 	for i in carriages.get_child_count():
 		var carriage: Carriage = carriages.get_child(i) as Carriage
@@ -40,7 +40,7 @@ func _ready():
 	
 	await dialogues.play_dialogue(Enums.dialogue_states.KEN, "ending")
 	
-	return get_tree().quit()
+	get_tree().quit()
 
 func _start_level(lvl: int) -> void:
 	level = lvl
