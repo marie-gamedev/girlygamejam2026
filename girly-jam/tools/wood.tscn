@@ -18,12 +18,11 @@ position = Vector2(46.08696, -174.78261)
 texture = ExtResource("2_rujko")
 
 [node name="Label" type="Label" parent="." index="3" unique_id=1022998448]
-visible = false
-offset_left = -49.0
-offset_top = -12.0
-offset_right = 54.0
-offset_bottom = 11.0
-text = "Wood Bucket"
+offset_left = -26.086958
+offset_top = -21.739132
+offset_right = 20.304346
+offset_bottom = 1.2608681
+text = "Wood"
 
 [node name="Color Blob" parent="." index="5" unique_id=1416029438]
 modulate = Color(0.84920835, 0.43163195, 0.5587264, 1)

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cj8322kj8s03m"]
+
+[ext_resource type="Script" uid="uid://b8v80w450ldb2" path="res://assets/ui_ux_util/tooltip.gd" id="1_wq2ig"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryguw"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 14.0
+bg_color = Color(0.09568194, 0.097944714, 0.13955346, 0.6)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Tooltip" type="PanelContainer" unique_id=698040888]
+top_level = true
+custom_maximum_size = Vector2(260, -1)
+offset_right = 200.0
+offset_bottom = 164.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ryguw")
+script = ExtResource("1_wq2ig")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2062831589]
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "meow this is some [b]bold[/b] text
+meow this is some [b]bold[/b] text
+meow this is some [b]bold[/b] text"
+fit_content = true

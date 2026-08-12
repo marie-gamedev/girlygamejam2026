@@ -21,6 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://bps5a0hjcnwhj" path="res://assets/cleaning/tool_shed.png" id="15_82xsv"]
 [ext_resource type="Script" uid="uid://bjyb65t3pljrg" path="res://assets/ui_ux_util/screenshot_manager.gd" id="20_82xsv"]
 [ext_resource type="Texture2D" uid="uid://cc5ncd2aoskgn" path="res://assets/cozy_ui/Assets/Menu Buttons/Clear Menu Buttons/Grass-Buttons-arrow2.png" id="21_getpj"]
+[ext_resource type="Script" uid="uid://bmqiqlf3xp6my" path="res://assets/ui_ux_util/tooltip_interact.gd" id="22_d13ii"]
+[ext_resource type="PackedScene" uid="uid://cj8322kj8s03m" path="res://assets/ui_ux_util/tooltip.tscn" id="22_ryguw"]
 
 [node name="Node2D" type="Node2D" unique_id=1190668301]
 
@@ -138,8 +140,24 @@ offset_right = 987.0
 offset_bottom = 99.0
 icon = ExtResource("13_ycdy4")
 flat = true
+script = ExtResource("22_d13ii")
 
-[node name="ScreenshotButton" type="Button" parent="Control" unique_id=1701902716 node_paths=PackedStringArray("_open_folder_button")]
+[node name="Tooltip" parent="Control/FinishWashButton" unique_id=698040888 instance=ExtResource("22_ryguw")]
+layout_mode = 0
+offset_right = 164.0
+offset_bottom = 49.0
+
+[node name="RichTextLabel" parent="Control/FinishWashButton/Tooltip" index="0" unique_id=2062831589]
+text = "finish washing!"
+
+[node name="Screenshot Util" type="Control" parent="Control" unique_id=1649747279 node_paths=PackedStringArray("_open_folder_button")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("20_82xsv")
+_open_folder_button = NodePath("ScreenshotLocationButton")
+
+[node name="ScreenshotButton" type="Button" parent="Control/Screenshot Util" unique_id=1701902716]
 layout_mode = 0
 offset_left = 784.0
 offset_top = 13.0
@@ -147,10 +165,18 @@ offset_right = 882.0
 offset_bottom = 109.0
 icon = ExtResource("14_w48qg")
 flat = true
-script = ExtResource("20_82xsv")
-_open_folder_button = NodePath("../ScreenshotLocationButton")
+script = ExtResource("22_d13ii")
 
-[node name="ScreenshotLocationButton" type="Button" parent="Control" unique_id=2031449882]
+[node name="Tooltip" parent="Control/Screenshot Util/ScreenshotButton" unique_id=1789365695 instance=ExtResource("22_ryguw")]
+visible = false
+layout_mode = 0
+offset_right = 185.0
+offset_bottom = 49.0
+
+[node name="RichTextLabel" parent="Control/Screenshot Util/ScreenshotButton/Tooltip" index="0" unique_id=2062831589]
+text = "take a screenshot"
+
+[node name="ScreenshotLocationButton" type="Button" parent="Control/Screenshot Util" unique_id=2031449882]
 layout_mode = 0
 offset_left = 847.99994
 offset_top = 71.0
@@ -159,6 +185,16 @@ offset_bottom = 167.0
 scale = Vector2(0.5064522, 0.5064522)
 icon = ExtResource("21_getpj")
 flat = true
+script = ExtResource("22_d13ii")
+
+[node name="Tooltip" parent="Control/Screenshot Util/ScreenshotLocationButton" unique_id=480716975 instance=ExtResource("22_ryguw")]
+visible = false
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 49.0
+
+[node name="RichTextLabel" parent="Control/Screenshot Util/ScreenshotLocationButton/Tooltip" index="0" unique_id=2062831589]
+text = "open screenshot folder"
 
 [connection signal="timeout" from="GameManager/InbetweenLevelTimer" to="GameManager" method="_on_inbetween_level_timer_timeout"]
 [connection signal="mouse_entered" from="World/Tools/Sponge" to="World/Tools/Sponge" method="_on_mouse_entered"]
@@ -170,5 +206,9 @@ flat = true
 [connection signal="mouse_entered" from="World/Tools/Towel" to="World/Tools/Towel" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="World/Tools/Towel" to="World/Tools/Towel" method="_on_mouse_exited"]
 [connection signal="pressed" from="Control/FinishWashButton" to="GameManager" method="_on_finish_wash_button_pressed"]
-[connection signal="pressed" from="Control/ScreenshotButton" to="Control/ScreenshotButton" method="_on_take_screenshot_button_pressed"]
-[connection signal="pressed" from="Control/ScreenshotLocationButton" to="Control/ScreenshotButton" method="_on_open_screenshot_folder_button_pressed"]
+[connection signal="pressed" from="Control/Screenshot Util/ScreenshotButton" to="Control/Screenshot Util/ScreenshotButton" method="_on_take_screenshot_button_pressed"]
+[connection signal="pressed" from="Control/Screenshot Util/ScreenshotLocationButton" to="Control/Screenshot Util/ScreenshotButton" method="_on_open_screenshot_folder_button_pressed"]
+
+[editable path="Control/FinishWashButton/Tooltip"]
+[editable path="Control/Screenshot Util/ScreenshotButton/Tooltip"]
+[editable path="Control/Screenshot Util/ScreenshotLocationButton/Tooltip"]
