@@ -8,7 +8,7 @@ var last_cleaned_pos : Vector2 = Vector2.INF
 @export var tex_draw_distance = 1000
 
 var pressed := false
-var _current_carriage_to_clean = null
+var _current_carriage_to_clean : Carriage = null
 var _layer_by_type: Dictionary = {}
 var _active_layer = null
 
@@ -20,7 +20,7 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if !_current_carriage_to_clean:
-		pass
+		return
 	
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		pressed = event.is_pressed()
@@ -33,16 +33,20 @@ func _input(event: InputEvent) -> void:
 
 func _process(_delta: float) -> void:
 	if !_current_carriage_to_clean:
-		pass
-		
-	if pressed:
-		# var active_layer: DirtLayer = _layer_by_type.get(ToolsManager.bucket_mode)
+		return
+	
+	var mouse_pos = get_global_mouse_position()
+	if pressed && _current_carriage_to_clean.sprite.get_rect().has_point(_current_carriage_to_clean.sprite.to_local(mouse_pos)):
 		if _active_layer:
-			var mouse_pos = get_global_mouse_position()
 			var sqd = (last_cleaned_pos - mouse_pos).length_squared()
 			if last_cleaned_pos == Vector2.INF || sqd > tex_draw_distance:
 				last_cleaned_pos = mouse_pos
 				_active_layer.scrub_at_global_pos(mouse_pos)
+		
+		ToolsManager.emit_particles(true)
+		return
+	
+	ToolsManager.emit_particles(false)
 
 func set_tool(tool: Enums.bucket_mode) -> void: # only used in test scene
 	print("current bucket set to %s" % GlobalEnums.bucket_mode.keys()[tool])

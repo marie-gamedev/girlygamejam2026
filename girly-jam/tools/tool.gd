@@ -41,11 +41,15 @@ func deselect() -> void:
 	ToolsManager.set_mode(Enums.tools_mode.NONE)
 
 func check_particle_requirements() -> bool:
-	if (ToolsManager.mode == Enums.tools_mode.SPONGE
-	&& Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
-	&& ToolsManager.bucket_mode != Enums.bucket_mode.NONE):
-		return true
-	return false
+	if (ToolsManager.mode == Enums.tools_mode.NONE
+	|| !Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
+		return false
+	
+	if (ToolsManager.mode == Enums.tools_mode.SPONGE &&
+		ToolsManager.bucket_mode == Enums.bucket_mode.NONE):
+		return false
+
+	return true
 
 func tint_tool(color : Color) -> void:
 	sprite.modulate = color;

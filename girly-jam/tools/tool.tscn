@@ -2,13 +2,31 @@
 
 [ext_resource type="Script" uid="uid://c6o6i2ykqr12" path="res://tools/tool.gd" id="1_f6vxs"]
 [ext_resource type="Texture2D" uid="uid://dnf57hmvmkjdq" path="res://assets/tools/sponge.png" id="2_3gk12"]
+[ext_resource type="Texture2D" uid="uid://syo2a5vrtlrl" path="res://assets/particles/Sparkles-2.png" id="4_h2ilu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gk12"]
 size = Vector2(142, 182.25)
 
+[sub_resource type="Curve" id="Curve_lcxww"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_h2ilu"]
+curve = SubResource("Curve_lcxww")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kryn4"]
+lifetime_randomness = 0.3
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(60, 60, 1)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.049999997
+scale_max = 0.19999999
+alpha_curve = SubResource("CurveTexture_h2ilu")
+
 [node name="Tool" type="Area2D" unique_id=1391043698 node_paths=PackedStringArray("particle_system", "sprite")]
 script = ExtResource("1_f6vxs")
-particle_system = NodePath("ParticleSystem")
+particle_system = NodePath("BubbleParticleSystem")
 sprite = NodePath("Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=36770998]
@@ -18,7 +36,18 @@ shape = SubResource("RectangleShape2D_3gk12")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2090715542]
 texture = ExtResource("2_3gk12")
 
-[node name="ParticleSystem" type="Node2D" parent="." unique_id=1660493306]
+[node name="BubbleParticleSystem" type="Node2D" parent="." unique_id=1660493306]
 position = Vector2(-8, 56)
+
+[node name="SparkleParticleSystem" type="Node2D" parent="." unique_id=1573862826]
+
+[node name="Sparkle1" type="GPUParticles2D" parent="SparkleParticleSystem" unique_id=478140061]
+scale = Vector2(0.9985388, 0.9896014)
+emitting = false
+amount = 10
+texture = ExtResource("4_h2ilu")
+lifetime = 2.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_kryn4")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

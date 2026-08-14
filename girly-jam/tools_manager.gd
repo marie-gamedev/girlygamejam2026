@@ -13,10 +13,6 @@ func _ready():
 func _process(_delta):
 	if follow_tool:
 		follow_tool.position = get_global_mouse_position()
-		if follow_tool.check_particle_requirements():
-			follow_tool.toggle_particle_system(true)
-		else:
-			follow_tool.toggle_particle_system(false)
 
 func set_mode(_mode: Enums.tools_mode):
 	if mode == Enums.tools_mode.SPONGE && _mode == Enums.tools_mode.NONE:
@@ -42,3 +38,9 @@ func register_tool(tool: Tool) -> void:
 
 func get_tool(type: GlobalEnums.tools_mode) -> Tool:
 	return _tools.get(type, null)
+
+# called from clean controller
+func emit_particles(value : bool) -> void:
+	if follow_tool:
+		value = value && follow_tool.check_particle_requirements()
+		follow_tool.toggle_particle_system(value)

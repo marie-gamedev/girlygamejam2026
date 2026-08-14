@@ -6,7 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgwdc"]
 size = Vector2(189, 182.25)
 
-[node name="Sewing" unique_id=1391043698 instance=ExtResource("1_wg0mi")]
+[node name="Sewing" unique_id=1391043698 node_paths=PackedStringArray("particle_system") instance=ExtResource("1_wg0mi")]
+particle_system = NodePath("SparkleParticleSystem")
 type = 4
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=36770998]
@@ -15,3 +16,6 @@ shape = SubResource("RectangleShape2D_cgwdc")
 
 [node name="Sprite2D" parent="." index="1" unique_id=2090715542]
 texture = ExtResource("2_cgwdc")
+
+[node name="BubbleParticleSystem" parent="." index="2" unique_id=1660493306]
+visible = false

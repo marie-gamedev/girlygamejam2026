@@ -4,9 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://dmwwcw5kjqa15" path="res://assets/cleaning/carriage_material.tscn" id="2_mfgdk"]
 [ext_resource type="Texture2D" uid="uid://b884galvtix28" path="res://assets/carriages/princesspauper/outline_bg.png" id="3_523sg"]
 
-[node name="Carriage" type="Node2D" unique_id=575866561 node_paths=PackedStringArray("layers")]
+[node name="Carriage" type="Node2D" unique_id=575866561 node_paths=PackedStringArray("layers", "sprite")]
 script = ExtResource("1_523sg")
 layers = [NodePath("Wood"), NodePath("Metal"), NodePath("Fabric"), NodePath("Metal/ExtraTex"), NodePath("Fabric/ExtraTex")]
+sprite = NodePath("Outline")
 
 [node name="Outline" type="Sprite2D" parent="." unique_id=110951242]
 texture = ExtResource("3_523sg")
