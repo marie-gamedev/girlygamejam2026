@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://gnu6bridoyxx"]
+
+[ext_resource type="PackedScene" uid="uid://botfqukrepi4o" path="res://assets/prefabs/carriage.tscn" id="1_6df6f"]
+[ext_resource type="Texture2D" uid="uid://clqi4a23ofmpa" path="res://assets/carriages/charm_school/Outline_Barbie_Princess_Charm_School_Carriage.png" id="2_34o6n"]
+[ext_resource type="Texture2D" uid="uid://cjnvimlqk1xk0" path="res://assets/carriages/charm_school/Wood_Barbie_Princess_Charm_School_Carriage.png" id="3_e83hc"]
+[ext_resource type="Texture2D" uid="uid://d1phu7eny77st" path="res://assets/carriages/charm_school/Metal_Barbie_Princess_Charm_School_Carriage.png" id="4_hmbjk"]
+[ext_resource type="Texture2D" uid="uid://bpvepkstkinoo" path="res://assets/carriages/charm_school/Fabric_Barbie_Princess_Charm_School_Carriage.png" id="5_1058p"]
+
+[node name="Carriage_Charm_School" unique_id=575866561 instance=ExtResource("1_6df6f")]
+scale = Vector2(0.275, 0.275)
+
+[node name="Outline" parent="." index="0" unique_id=110951242]
+texture = ExtResource("2_34o6n")
+
+[node name="CarriageTex" parent="Wood" parent_id_path=PackedInt32Array(830940108) index="0" unique_id=1146933715]
+texture = ExtResource("3_e83hc")
+
+[node name="DirtTex" parent="Wood" parent_id_path=PackedInt32Array(830940108) index="1" unique_id=1473268579]
+scale = Vector2(4.0751657, 4.0751657)
+
+[node name="CarriageTex" parent="Metal" parent_id_path=PackedInt32Array(1897144016) index="0" unique_id=1146933715]
+texture = ExtResource("4_hmbjk")
+
+[node name="DirtTex" parent="Metal" parent_id_path=PackedInt32Array(1897144016) index="1" unique_id=1473268579]
+scale = Vector2(4.1079216, 4.1079216)
+
+[node name="ExtraTex" parent="Metal" parent_id_path=PackedInt32Array(1897144016) index="3" unique_id=649079568]
+scale = Vector2(0.8803412, 0.8803412)
+
+[node name="CarriageTex" parent="Fabric" parent_id_path=PackedInt32Array(2123264892) index="0" unique_id=1146933715]
+texture = ExtResource("5_1058p")
+
+[node name="DirtTex" parent="Fabric" parent_id_path=PackedInt32Array(2123264892) index="1" unique_id=1473268579]
+scale = Vector2(4.091804, 4.091804)
+
+[node name="ExtraTex" parent="Fabric" parent_id_path=PackedInt32Array(2123264892) index="3" unique_id=649079568]
+scale = Vector2(0.868027, 0.868027)
+
+[editable path="Wood"]
+[editable path="Metal"]
+[editable path="Fabric"]

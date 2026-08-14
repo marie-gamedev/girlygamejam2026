@@ -3,16 +3,16 @@
 [ext_resource type="Script" uid="uid://b8v80w450ldb2" path="res://assets/ui_ux_util/tooltip.gd" id="1_wq2ig"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryguw"]
-content_margin_left = 24.0
-content_margin_top = 12.0
-content_margin_right = 24.0
-content_margin_bottom = 14.0
-bg_color = Color(0.09568194, 0.097944714, 0.13955346, 0.6)
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+bg_color = Color(0.91764706, 0.2901961, 0.69411767, 0.5058824)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
-border_color = Color(0, 0, 0, 1)
+border_color = Color(0.89799106, 0.57896906, 0.8019664, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -21,9 +21,9 @@ corner_detail = 5
 
 [node name="Tooltip" type="PanelContainer" unique_id=698040888]
 top_level = true
-custom_maximum_size = Vector2(260, -1)
-offset_right = 200.0
-offset_bottom = 164.0
+custom_maximum_size = Vector2(220, -1)
+offset_right = 220.0
+offset_bottom = 152.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ryguw")
 script = ExtResource("1_wq2ig")
