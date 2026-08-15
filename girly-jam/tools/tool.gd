@@ -18,6 +18,9 @@ func _ready():
 	mouse_exited.connect(on_mouse_exited)
 
 func on_mouse_entered():
+	if ToolsManager.follow_tool == self:
+		return
+	
 	if ToolsManager.can_interact_with_tools:
 		tooltip.toggle(true)
 	
@@ -28,7 +31,6 @@ func toggle_particle_system(toggle: bool) -> void:
 	if toggle && !audio_player.playing:
 		audio_player.play()
 	elif !toggle && audio_player.playing:
-		print("stop")
 		audio_player.stop()
 	
 	if get_child_count() == 0:
@@ -75,4 +77,3 @@ func check_particle_requirements() -> bool:
 
 func tint_tool(color : Color) -> void:
 	sprite.modulate = color;
-	pass
