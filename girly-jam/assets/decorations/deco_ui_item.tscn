@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dd2vijldntyvu"]
+
+[ext_resource type="Script" uid="uid://brlwwfq6g5vl2" path="res://assets/decorations/deco_ui_item.gd" id="1_irec2"]
+[ext_resource type="Texture2D" uid="uid://cvpal2mma7vek" path="res://assets/cozy_ui/Assets/Menu Buttons/Clear Menu Buttons/Butto.png" id="1_ptxud"]
+[ext_resource type="Texture2D" uid="uid://cxk8kqjgc8pwo" path="res://assets/decorations/Ribbon-1.png" id="1_rx7ns"]
+[ext_resource type="Texture2D" uid="uid://bjkcrnbi1cuto" path="res://assets/cozy_ui/Assets/Menu Buttons/Clear Menu Buttons/Pressed/Butto-pressed.png" id="2_ouy8q"]
+
+[node name="Item" type="TextureButton" unique_id=1467629999]
+custom_minimum_size = Vector2(100, 100)
+custom_maximum_size = Vector2(100, 100)
+offset_right = 80.0
+offset_bottom = 80.0
+texture_normal = ExtResource("1_ptxud")
+texture_pressed = ExtResource("2_ouy8q")
+texture_hover = ExtResource("2_ouy8q")
+stretch_mode = 4
+script = ExtResource("1_irec2")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=51898954]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Sprite2D" type="TextureRect" parent="MarginContainer" unique_id=990822863]
+layout_mode = 2
+texture = ExtResource("1_rx7ns")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="pressed" from="." to="." method="pressed"]

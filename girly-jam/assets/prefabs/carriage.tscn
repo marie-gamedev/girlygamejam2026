@@ -8,10 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://vpohyx17ou2" path="res://assets/cleaning/dirt/Fabric_Dirt_Textures-4.png" id="7_5xc2e"]
 [ext_resource type="Texture2D" uid="uid://cr31r2uol7fym" path="res://assets/cleaning/dirt/Fabric_Rips_Dirt_Textures-6.png" id="8_5o23w"]
 
-[node name="Carriage" type="Node2D" unique_id=575866561 node_paths=PackedStringArray("layers", "sprite")]
+[node name="Carriage" type="Node2D" unique_id=575866561 node_paths=PackedStringArray("layers", "sprite", "area")]
 script = ExtResource("1_523sg")
 layers = [NodePath("Wood"), NodePath("Metal"), NodePath("Fabric"), NodePath("Metal/ExtraTex"), NodePath("Fabric/ExtraTex")]
 sprite = NodePath("Outline")
+area = NodePath("Area2D")
 
 [node name="Outline" type="Sprite2D" parent="." unique_id=110951242]
 texture = ExtResource("3_523sg")
@@ -52,6 +53,11 @@ modulate = Color(0.16470589, 0.10980392, 0.14509805, 1)
 texture = ExtResource("8_5o23w")
 material_type = 3
 required_tool = 4
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1676938615]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2109659370]
+polygon = PackedVector2Array(-141, -81, -154, 83, 191, 99, 211, -72)
 
 [editable path="Wood"]
 [editable path="Metal"]

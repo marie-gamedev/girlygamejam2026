@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b01eisxpcqh56"]
+
+[ext_resource type="Script" uid="uid://dgus0elw7fagt" path="res://assets/decorations/decoration.gd" id="1_3rmvv"]
+[ext_resource type="Texture2D" uid="uid://d1cgqjgorigow" path="res://assets/cozy_ui/Assets/Butterfly/Butterfly-7.png" id="2_3rmvv"]
+
+[node name="Decoration" type="Area2D" unique_id=1933163831]
+scale = Vector2(0.20558327, 0.20558327)
+script = ExtResource("1_3rmvv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2092458432]
+scale = Vector2(6.4027257, 6.402725)
+texture = ExtResource("2_3rmvv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=274039620]
+polygon = PackedVector2Array(111.8768, -53.506294, 126, 41, 53.506294, 111.8768, -131.33363, 9.728417, -116.74101, -116.74101)
