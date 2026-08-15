@@ -24,7 +24,7 @@ texture = ExtResource("3_so05j")
 position = Vector2(-8, 56)
 
 [node name="Timer" type="Timer" parent="." unique_id=1288343409]
-wait_time = 5.0
+wait_time = 15.0
 one_shot = true
 
 [node name="Color Blob" type="Sprite2D" parent="." unique_id=1416029438]

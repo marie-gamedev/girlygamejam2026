@@ -1,0 +1,41 @@
+~ start
+Prince Nicholas: M'lady, I am Prince Nicholas, young swain from the east, most priviliged to make your aquaintance.
+- I, kind swain and bonnie..
+Prince Nicholas: uhm?
+- ..maiden of washadia..
+Prince Nicholas: washadia? as in "wash"?
+- ..honored above all..
+Prince Nicholas: .. yea?
+- ..to be welcomed into..
+Prince Nicholas: into.. what?
+- ..your swayniness! :3
+Prince Nicholas: Well.. [wait=1] done! ha ha :D
+Prince Nicholas: So, I am finally getting married to my blair, maiden of..
+Prince Nicholas: Yea you get the gist!
+Prince Nicholas: And I need this carriage cleaned for the wedding, please!
+- Okay, got it! (curtsies)
+=> END
+
+~ postdialogue
+Prince Nicholas: Bonnie.. [wait=1] maiden of washadia, I extend my heartfelt thanks to you and your royal carriage washing services.
+Prince Nicholas: You, M'lady and Prince Kyle will forever have my utmost gratitude!
+- (giggles) I, kind swain..
+	Prince Nicholas: mhm?
+	- ..and bonnie..
+	Prince Nicholas: maiden of?
+	- ..maiden of washadia..
+	Prince Nicholas: mhm mhm
+	- ..am very pleased..
+	Prince Nicholas:
+		...
+	- ..to have fullfilled your expectations.
+	Prince Nicholas:
+		Okay, okay..
+	- It was my uttermost pleasure..
+	Prince Nicholas:
+		Okay, 
+	- ..to have served you.
+- no problemo
+~ alright
+Prince Nicholas: Ha ha, alright
+=> END

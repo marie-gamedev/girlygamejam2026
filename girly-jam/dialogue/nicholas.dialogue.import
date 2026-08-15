@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b0f86tkj4gtlj"
+path="res://.godot/imported/nicholas.dialogue-95e852fbfc7b6147ff5bb65edd4357b2.tres"
+
+[deps]
+
+source_file="res://dialogue/nicholas.dialogue"
+dest_files=["res://.godot/imported/nicholas.dialogue-95e852fbfc7b6147ff5bb65edd4357b2.tres"]
+
+[params]
+
+defaults=true

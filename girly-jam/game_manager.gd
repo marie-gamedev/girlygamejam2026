@@ -30,7 +30,7 @@ func _ready() -> void:
 	
 	carriages.position = Vector2(400,0)
 	
-	await dialogues.play_dialogue(Enums.dialogue_states.KEN, "start")
+	await dialogues.play_dialogue(Enums.dialogue_states.KYLE, "start")
 	
 	move_carriage(level)
 	
@@ -41,7 +41,7 @@ func _ready() -> void:
 		await _start_level(level)
 		level += 1
 	
-	await dialogues.play_dialogue(Enums.dialogue_states.KEN, "ending")
+	await dialogues.play_dialogue(Enums.dialogue_states.KYLE, "ending")
 	
 	get_tree().quit()
 
@@ -85,9 +85,9 @@ func get_dialogue_per_level(lvl: int) -> Enums.dialogue_states:
 		1:
 			return Enums.dialogue_states.DOMINICK
 		2:
-			return Enums.dialogue_states.JULIAN
+			return Enums.dialogue_states.NICHOLAS
 		_:
-			return Enums.dialogue_states.KEN
+			return Enums.dialogue_states.KYLE
 
 func wait_for_game_state(target_state: Enums.game_state) -> void:
 	while game_state != target_state:
