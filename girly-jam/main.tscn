@@ -21,6 +21,44 @@
 [ext_resource type="Script" uid="uid://bjyb65t3pljrg" path="res://assets/ui_ux_util/screenshot_manager.gd" id="20_82xsv"]
 [ext_resource type="Texture2D" uid="uid://cc5ncd2aoskgn" path="res://assets/cozy_ui/Assets/Menu Buttons/Clear Menu Buttons/Grass-Buttons-arrow2.png" id="21_getpj"]
 [ext_resource type="Texture2D" uid="uid://bupelsp7s3hh0" path="res://assets/cozy_ui/Assets/Menu Buttons/Clear Menu Buttons/Pressed/Buttons-pressed-arrow2.png" id="21_ryguw"]
+[ext_resource type="PackedScene" uid="uid://c2m2qb6hdiceu" path="res://assets/decorations/deco_ribbon-1.tscn" id="22_1u8w0"]
+[ext_resource type="Texture2D" uid="uid://d37jwbwiv5ptq" path="res://assets/cozy_ui/Assets/Buttons/Store.png" id="22_d13ii"]
+[ext_resource type="PackedScene" uid="uid://bp320t2oq2s80" path="res://assets/decorations/deco_ribbon-2.tscn" id="23_0odxb"]
+[ext_resource type="Texture2D" uid="uid://can28v5axvmtt" path="res://assets/cozy_ui/Assets/Buttons/Press-store.png" id="23_1u8w0"]
+[ext_resource type="Script" uid="uid://dxyo42axfsffd" path="res://assets/decorations/decorations_spawner.gd" id="24_1u8w0"]
+[ext_resource type="PackedScene" uid="uid://cbu3umqgtduy0" path="res://assets/decorations/deco_ribbon-3.tscn" id="24_lswn8"]
+[ext_resource type="PackedScene" uid="uid://dd2vijldntyvu" path="res://assets/decorations/deco_ui_item.tscn" id="25_0odxb"]
+[ext_resource type="Texture2D" uid="uid://goeypw73bpne" path="res://assets/decorations/Ribbon-2.png" id="28_kq58d"]
+[ext_resource type="Texture2D" uid="uid://ds3dwg6vyqh40" path="res://assets/decorations/Ribbon-3.png" id="30_seu75"]
+[ext_resource type="PackedScene" uid="uid://tfltvsutis18" path="res://assets/decorations/deco_butterfly-1.tscn" id="31_facbu"]
+[ext_resource type="Texture2D" uid="uid://bqgins7rwlnkf" path="res://assets/cozy_ui/Assets/Butterfly/Butterfly-1.png" id="31_ok6jj"]
+[ext_resource type="Texture2D" uid="uid://d1cgqjgorigow" path="res://assets/cozy_ui/Assets/Butterfly/Butterfly-7.png" id="32_facbu"]
+[ext_resource type="PackedScene" uid="uid://b01eisxpcqh56" path="res://assets/decorations/deco_butterfly-2.tscn" id="33_0cp0l"]
+[ext_resource type="Texture2D" uid="uid://gotrl3xdfale" path="res://assets/cozy_ui/Assets/Butterfly/Butterfly-3.png" id="33_b1qrp"]
+[ext_resource type="Texture2D" uid="uid://n2atyhh7o01q" path="res://assets/cozy_ui/Assets/Butterfly/Butterfly-9.png" id="34_come4"]
+[ext_resource type="PackedScene" uid="uid://dn5mf6gwaoas4" path="res://assets/decorations/deco_butterfly-3.tscn" id="35_d2t1y"]
+[ext_resource type="Texture2D" uid="uid://bj1gn6wxd83j8" path="res://assets/cozy_ui/Assets/Butterfly/Butterfly-4.png" id="35_h8e4i"]
+[ext_resource type="Texture2D" uid="uid://dmenrwf52slxg" path="res://assets/cozy_ui/Assets/Butterfly/Butterfly-10.png" id="36_4lmeg"]
+[ext_resource type="PackedScene" uid="uid://bbiodhegmm05j" path="res://assets/decorations/deco_butterfly-4.tscn" id="37_gngh3"]
+[ext_resource type="PackedScene" uid="uid://djdr0g3ap5dyn" path="res://assets/decorations/deco_butterfly-5.tscn" id="39_0n3wm"]
+[ext_resource type="PackedScene" uid="uid://cjb3srxs484iy" path="res://assets/decorations/deco_butterfly-6.tscn" id="41_qnost"]
+[ext_resource type="Script" uid="uid://lpp3kktotxv" path="res://assets/decorations/deco_parent.gd" id="43_d2t1y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w12w5"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.68235296, 0.9529412, 0.9137255, 0.7882353)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.6117647, 0.89411765, 0.85882354, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [node name="Node2D" type="Node2D" unique_id=1190668301]
 
@@ -28,11 +66,13 @@
 script = ExtResource("1_074og")
 game_manager = NodePath("../GameManager")
 
-[node name="GameManager" type="Node2D" parent="." unique_id=806895744 node_paths=PackedStringArray("ui_parent", "dialogues")]
+[node name="GameManager" type="Node2D" parent="." unique_id=806895744 node_paths=PackedStringArray("ui_parent", "dialogues", "decoration_parent")]
 position = Vector2(4, 0)
+scale = Vector2(0.9665052, 0.97775733)
 script = ExtResource("1_ig7tw")
 ui_parent = NodePath("../UI Parent")
 dialogues = NodePath("../Dialogues")
+decoration_parent = NodePath("../DecorationsParent")
 
 [node name="InbetweenLevelTimer" type="Timer" parent="GameManager" unique_id=386911362]
 wait_time = 5.0
@@ -153,6 +193,124 @@ texture_hover = ExtResource("21_ryguw")
 [node name="RichTextLabel" parent="UI Parent/Control/Screenshot Util/ScreenshotLocationButton/Tooltip" parent_id_path=PackedInt32Array(1365261487, 698040888) index="0" unique_id=2062831589]
 text = "open screenshot folder"
 
+[node name="DecorationsButton" parent="UI Parent/Control" unique_id=298823371 instance=ExtResource("16_getpj")]
+layout_mode = 0
+offset_left = 670.0
+offset_top = 21.0
+offset_right = 769.0
+offset_bottom = 106.0
+texture_normal = ExtResource("22_d13ii")
+texture_pressed = ExtResource("23_1u8w0")
+texture_hover = ExtResource("23_1u8w0")
+
+[node name="RichTextLabel" parent="UI Parent/Control/DecorationsButton/Tooltip" parent_id_path=PackedInt32Array(298823371, 698040888) index="0" unique_id=2062831589]
+text = "open decorations store"
+
+[node name="DecorationsPanel" type="Panel" parent="UI Parent/Control" unique_id=168332106 node_paths=PackedStringArray("deco_parent")]
+z_index = 2
+layout_mode = 0
+offset_left = 98.0
+offset_top = 133.0
+offset_right = 898.0
+offset_bottom = 383.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxFlat_w12w5")
+script = ExtResource("24_1u8w0")
+deco_parent = NodePath("../../../DecorationsParent")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI Parent/Control/DecorationsPanel" unique_id=728128451]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="UI Parent/Control/DecorationsPanel/MarginContainer" unique_id=668792174]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 7
+
+[node name="Ribbon-1" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer" unique_id=900245496 instance=ExtResource("25_0odxb")]
+layout_mode = 2
+prefab = ExtResource("22_1u8w0")
+
+[node name="Ribbon-2" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer" unique_id=732753090 instance=ExtResource("25_0odxb")]
+layout_mode = 2
+prefab = ExtResource("23_0odxb")
+
+[node name="Sprite2D" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Ribbon-2/MarginContainer" parent_id_path=PackedInt32Array(732753090, 51898954) index="0" unique_id=990822863]
+texture = ExtResource("28_kq58d")
+
+[node name="Ribbon-3" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer" unique_id=610630033 instance=ExtResource("25_0odxb")]
+layout_mode = 2
+prefab = ExtResource("24_lswn8")
+
+[node name="Sprite2D" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Ribbon-3/MarginContainer" parent_id_path=PackedInt32Array(610630033, 51898954) index="0" unique_id=990822863]
+texture = ExtResource("30_seu75")
+
+[node name="Butterfly-1" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer" unique_id=1231311121 instance=ExtResource("25_0odxb")]
+layout_mode = 2
+prefab = ExtResource("31_facbu")
+
+[node name="Sprite2D" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-1/MarginContainer" parent_id_path=PackedInt32Array(1231311121, 51898954) index="0" unique_id=990822863]
+texture = ExtResource("31_ok6jj")
+expand_mode = 0
+stretch_mode = 3
+
+[node name="Butterfly-2" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer" unique_id=1889811462 instance=ExtResource("25_0odxb")]
+layout_mode = 2
+prefab = ExtResource("33_0cp0l")
+
+[node name="Sprite2D" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-2/MarginContainer" parent_id_path=PackedInt32Array(1889811462, 51898954) index="0" unique_id=990822863]
+texture = ExtResource("32_facbu")
+expand_mode = 0
+stretch_mode = 3
+
+[node name="Butterfly-3" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer" unique_id=553795035 instance=ExtResource("25_0odxb")]
+layout_mode = 2
+prefab = ExtResource("35_d2t1y")
+
+[node name="Sprite2D" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-3/MarginContainer" parent_id_path=PackedInt32Array(553795035, 51898954) index="0" unique_id=990822863]
+texture = ExtResource("33_b1qrp")
+expand_mode = 0
+stretch_mode = 3
+
+[node name="Butterfly-4" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer" unique_id=766126516 instance=ExtResource("25_0odxb")]
+layout_mode = 2
+prefab = ExtResource("37_gngh3")
+
+[node name="Sprite2D" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-4/MarginContainer" parent_id_path=PackedInt32Array(766126516, 51898954) index="0" unique_id=990822863]
+texture = ExtResource("34_come4")
+expand_mode = 0
+stretch_mode = 3
+
+[node name="Butterfly-5" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer" unique_id=1935626223 instance=ExtResource("25_0odxb")]
+layout_mode = 2
+prefab = ExtResource("39_0n3wm")
+
+[node name="Sprite2D" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-5/MarginContainer" parent_id_path=PackedInt32Array(1935626223, 51898954) index="0" unique_id=990822863]
+texture = ExtResource("35_h8e4i")
+expand_mode = 0
+stretch_mode = 3
+
+[node name="Butterfly-6" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer" unique_id=1111518825 instance=ExtResource("25_0odxb")]
+layout_mode = 2
+prefab = ExtResource("41_qnost")
+
+[node name="Sprite2D" parent="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-6/MarginContainer" parent_id_path=PackedInt32Array(1111518825, 51898954) index="0" unique_id=990822863]
+texture = ExtResource("36_4lmeg")
+expand_mode = 0
+stretch_mode = 3
+
+[node name="DecorationsParent" type="Node2D" parent="." unique_id=534529263]
+script = ExtResource("43_d2t1y")
+
 [connection signal="timeout" from="GameManager/InbetweenLevelTimer" to="GameManager" method="_on_inbetween_level_timer_timeout"]
 [connection signal="mouse_entered" from="World/Tools/Sponge" to="World/Tools/Sponge" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="World/Tools/Sponge" to="World/Tools/Sponge" method="_on_mouse_exited"]
@@ -165,6 +323,7 @@ text = "open screenshot folder"
 [connection signal="pressed" from="UI Parent/Control/FinishWashButton" to="GameManager" method="_on_finish_wash_button_pressed"]
 [connection signal="pressed" from="UI Parent/Control/Screenshot Util/ScreenshotButton" to="UI Parent/Control/Screenshot Util" method="_on_take_screenshot_button_pressed"]
 [connection signal="pressed" from="UI Parent/Control/Screenshot Util/ScreenshotLocationButton" to="UI Parent/Control/Screenshot Util" method="_on_open_screenshot_folder_button_pressed"]
+[connection signal="pressed" from="UI Parent/Control/DecorationsButton" to="UI Parent/Control/DecorationsPanel" method="deco_store_button_pressed"]
 
 [editable path="UI Parent/Control/FinishWashButton"]
 [editable path="UI Parent/Control/FinishWashButton/Tooltip"]
@@ -172,3 +331,14 @@ text = "open screenshot folder"
 [editable path="UI Parent/Control/Screenshot Util/ScreenshotButton/Tooltip"]
 [editable path="UI Parent/Control/Screenshot Util/ScreenshotLocationButton"]
 [editable path="UI Parent/Control/Screenshot Util/ScreenshotLocationButton/Tooltip"]
+[editable path="UI Parent/Control/DecorationsButton"]
+[editable path="UI Parent/Control/DecorationsButton/Tooltip"]
+[editable path="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Ribbon-1"]
+[editable path="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Ribbon-2"]
+[editable path="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Ribbon-3"]
+[editable path="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-1"]
+[editable path="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-2"]
+[editable path="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-3"]
+[editable path="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-4"]
+[editable path="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-5"]
+[editable path="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-6"]

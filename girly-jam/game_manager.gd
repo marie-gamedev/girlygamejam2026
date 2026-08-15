@@ -7,6 +7,7 @@ extends Node2D
 @onready var inbetween_level_timer = $InbetweenLevelTimer
 @onready var carriages: Node = $"../World/Carriages"
 var carriage_list: Array[Carriage] = []
+@export var decoration_parent : DecoParent
 
 var level: int = 1
 
@@ -18,6 +19,11 @@ var game_state : Enums.game_state = Enums.game_state.NONE:
 		EventBus.game_state_changed.emit(game_state, level)
 		ui_parent.visible = game_state == Enums.game_state.WASH
 		ToolsManager.set_can_interact_with_tools(game_state == Enums.game_state.WASH)
+		if game_state == Enums.game_state.WASH:
+			decoration_parent.detach_from_carriage()
+			decoration_parent.remove_all_children()
+		elif game_state == Enums.game_state.POSTDIALOGUE:
+			decoration_parent.attach_to_carriage(carriage_list[level - 1])
 
 signal game_state_changed(new_state: Enums.game_state, current_level : int)
 

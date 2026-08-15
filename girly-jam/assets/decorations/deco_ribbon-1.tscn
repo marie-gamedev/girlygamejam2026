@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c2m2qb6hdiceu"]
+
+[ext_resource type="Script" uid="uid://dgus0elw7fagt" path="res://assets/decorations/decoration.gd" id="1_tufqq"]
+[ext_resource type="Texture2D" uid="uid://cxk8kqjgc8pwo" path="res://assets/decorations/Ribbon-1.png" id="2_lbwug"]
+
+[node name="Decoration" type="Area2D" unique_id=1933163831]
+scale = Vector2(0.29612392, 0.29612392)
+script = ExtResource("1_tufqq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2092458432]
+scale = Vector2(0.7783784, 0.77837837)
+texture = ExtResource("2_lbwug")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=274039620]
+polygon = PackedVector2Array(55, -54, 54, 118, -105, 191, -90, -48, -222, -43, -222, -171, 234, -175, 227, -32)
