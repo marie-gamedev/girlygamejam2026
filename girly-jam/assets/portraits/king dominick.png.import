@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3bf1x35yobo"
-path="res://.godot/imported/kann.png-e1d3c6e1de3c5502e7fb78e4c8a6fc91.ctex"
+uid="uid://c3e7k0013etrj"
+path="res://.godot/imported/king dominick.png-ea1dfdff8776271136961860aa33339a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/kann.png"
-dest_files=["res://.godot/imported/kann.png-e1d3c6e1de3c5502e7fb78e4c8a6fc91.ctex"]
+source_file="res://assets/portraits/king dominick.png"
+dest_files=["res://.godot/imported/king dominick.png-ea1dfdff8776271136961860aa33339a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3e7k0013etrj"
-path="res://.godot/imported/king dominique.png-6a77033c49a2d07f731577ba737d2151.ctex"
+uid="uid://c3bf1x35yobo"
+path="res://.godot/imported/kyle.png-190a5a31ab010da7060a5bd88ed99eb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/king dominique.png"
-dest_files=["res://.godot/imported/king dominique.png-6a77033c49a2d07f731577ba737d2151.ctex"]
+source_file="res://assets/portraits/kyle.png"
+dest_files=["res://.godot/imported/kyle.png-190a5a31ab010da7060a5bd88ed99eb3.ctex"]
 
 [params]
 

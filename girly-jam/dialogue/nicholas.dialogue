@@ -1,23 +1,22 @@
 ~ start
 Prince Nicholas: M'lady, I am Prince Nicholas, young swain from the east, most priviliged to make your aquaintance.
 - I, kind swain and bonnie..
-Prince Nicholas: uhm?
+Prince Nicholas: pfffha ha
 - ..maiden of washadia..
-Prince Nicholas: washadia? as in "wash"?
+Prince Nicholas: washadia? as in [wait=1]"wash"?
 - ..honored above all..
 Prince Nicholas: .. yea?
 - ..to be welcomed into..
 Prince Nicholas: into.. what?
 - ..your swayniness! :3
-Prince Nicholas: Well.. [wait=1] done! ha ha :D
-Prince Nicholas: So, I am finally getting married to my blair, maiden of..
-Prince Nicholas: Yea you get the gist!
-Prince Nicholas: And I need this carriage cleaned for the wedding, please!
+Prince Nicholas: Well.. [wait=1] done! ha ha
+Prince Nicholas: So, I am finally getting married to my blair, maiden of.. [wait=1] yea you get the gist!
+Prince Nicholas: And I need this carriage cleaned and prepped for the wedding, please!
 - Okay, got it! (curtsies)
 => END
 
 ~ postdialogue
-Prince Nicholas: Bonnie.. [wait=1] maiden of washadia, I extend my heartfelt thanks to you and your royal carriage washing services.
+Prince Nicholas: Bonnie, maiden of [wait=1] washadia, I extend my heartfelt thanks to you and your royal carriage washing services.
 Prince Nicholas: You, M'lady and Prince Kyle will forever have my utmost gratitude!
 - (giggles) I, kind swain..
 	Prince Nicholas: mhm?
@@ -26,16 +25,14 @@ Prince Nicholas: You, M'lady and Prince Kyle will forever have my utmost gratitu
 	- ..maiden of washadia..
 	Prince Nicholas: mhm mhm
 	- ..am very pleased..
-	Prince Nicholas:
-		...
+	Prince Nicholas: yea?
 	- ..to have fullfilled your expectations.
-	Prince Nicholas:
-		Okay, okay..
-	- It was my uttermost pleasure..
-	Prince Nicholas:
-		Okay, 
-	- ..to have served you.
+	Prince Nicholas: The pleasure is mi-
+	- It has been my great pleasure..
+	Prince Nicholas: There's more??
+	- ..to be of service to you.
+	Prince Nicholas: Okay, okay, [wait=1] you win! Thank you again, Bonnie!
+	=> END
 - no problemo
-~ alright
 Prince Nicholas: Ha ha, alright
 => END

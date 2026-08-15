@@ -66,7 +66,7 @@ position = Vector2(510, 372.99997)
 scale = Vector2(2.0024273, 2.0024273)
 texture = ExtResource("3_l48gv")
 
-[node name="Button" type="Button" parent="Control" unique_id=1474516043]
+[node name="Button_Play" type="Button" parent="Control" unique_id=1474516043]
 layout_mode = 0
 offset_left = 337.0
 offset_top = 400.0
@@ -74,6 +74,15 @@ offset_right = 687.0011
 offset_bottom = 500.0002
 theme = SubResource("Theme_0ijca")
 text = "PLAY"
+
+[node name="Button_Quit" type="Button" parent="Control" unique_id=1298871874]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 519.0
+offset_right = 685.0011
+offset_bottom = 619.00024
+theme = SubResource("Theme_0ijca")
+text = "QUIT"
 
 [node name="Star" type="Sprite2D" parent="Control" unique_id=1524546649]
 visible = false
@@ -97,4 +106,5 @@ position = Vector2(644, 300)
 rotation = 0.4537856
 texture = ExtResource("8_nrnbx")
 
-[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button_Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button_Quit" to="." method="_on_button_quit_pressed"]

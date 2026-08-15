@@ -4,7 +4,7 @@ King Dominick: I'm honored to meet you Bonnie.
 	King Dominick: Please just call me Dominick!
 - Suuuup!
 	King Dominick: (smirking) [wait=1] Hey!
-King Dominick: So, my beloved Erika returned from her travels and is now a famous singer. And we are getting married next week
+King Dominick: So, my beloved Erika returned from her travels and is now a famous singer. We are getting married next week!
 King Dominick: After our wedding we will go and travel the world together! :D
 - Sounds great!
 King Dominick: I need this carriage cleaned and polished for the wedding.
@@ -13,5 +13,9 @@ King Dominick: I need this carriage cleaned and polished for the wedding.
 
 ~ postdialogue
 King Dominick: Thank you Bonnie, it turned out great!
-- Enjoy your wedding!
+King Dominick: You're, of course, more than welcome to come to the wedding, and feel free to bring Kyle along, too!
+- I would love to! Thanks!
+	King Dominick: Alright, see you then and thank you again!
+- No.. thanks..
+	King Dominick: Oh okay, no worries..
 => END
