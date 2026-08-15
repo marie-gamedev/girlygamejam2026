@@ -10,21 +10,22 @@ size = Vector2(62.608704, 83.478264)
 type = 2
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=36770998]
-position = Vector2(0, -1.7391322)
+position = Vector2(-24.347828, -5.2173915)
 shape = SubResource("RectangleShape2D_tkfg4")
 
 [node name="Sprite2D" parent="." index="1" unique_id=2090715542]
-position = Vector2(101.739136, -172.17392)
 texture = ExtResource("2_tkfg4")
 
-[node name="Label" type="Label" parent="." index="3" unique_id=1339615601]
-offset_left = -22.608696
-offset_top = -24.347826
-offset_right = 22.913044
-offset_bottom = -1.347826
-text = "Metal"
-
-[node name="Color Blob" parent="." index="5" unique_id=1416029438]
+[node name="Color Blob" parent="." index="4" unique_id=1416029438]
+visible = false
 modulate = Color(0.38924345, 0.54537535, 0.9292096, 1)
 position = Vector2(3.4782581, 11.304352)
 scale = Vector2(0.058900964, 0.05199185)
+
+[node name="Label" type="Label" parent="." index="5" unique_id=1339615601]
+visible = false
+offset_left = -22.608696
+offset_top = -24.347828
+offset_right = 22.913033
+offset_bottom = -1.3478279
+text = "Metal"

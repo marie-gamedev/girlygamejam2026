@@ -118,13 +118,13 @@ texture = ExtResource("15_82xsv")
 [node name="Buckets" type="Node2D" parent="World/Tools" unique_id=1439607084]
 
 [node name="Metal" parent="World/Tools/Buckets" unique_id=1028973642 instance=ExtResource("11_dg77c")]
-position = Vector2(48, 678)
+position = Vector2(76, 685.00006)
 
 [node name="Fabric" parent="World/Tools/Buckets" unique_id=318050728 instance=ExtResource("10_efxa6")]
-position = Vector2(43, 716)
+position = Vector2(76, 690)
 
 [node name="Wood" parent="World/Tools/Buckets" unique_id=965140780 instance=ExtResource("12_dg77c")]
-position = Vector2(117, 683)
+position = Vector2(86, 688.00006)
 
 [node name="Sponge" parent="World/Tools" unique_id=1176703255 instance=ExtResource("5_lquwl")]
 position = Vector2(272, 366)

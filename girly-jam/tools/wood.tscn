@@ -10,21 +10,22 @@ size = Vector2(56.521744, 60.869568)
 type = 1
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=36770998]
-position = Vector2(-3.0434816, 0)
+position = Vector2(26.956522, -1.7391305)
 shape = SubResource("RectangleShape2D_rujko")
 
 [node name="Sprite2D" parent="." index="1" unique_id=2090715542]
-position = Vector2(46.08696, -174.78261)
 texture = ExtResource("2_rujko")
 
-[node name="Label" type="Label" parent="." index="3" unique_id=1022998448]
-offset_left = -26.086958
-offset_top = -21.739132
-offset_right = 20.304346
-offset_bottom = 1.2608681
-text = "Wood"
-
-[node name="Color Blob" parent="." index="5" unique_id=1416029438]
+[node name="Color Blob" parent="." index="4" unique_id=1416029438]
+visible = false
 modulate = Color(0.84920835, 0.43163195, 0.5587264, 1)
 position = Vector2(1.73913, 9.565222)
 scale = Vector2(0.041483846, 0.041549202)
+
+[node name="Label" type="Label" parent="." index="5" unique_id=1022998448]
+visible = false
+offset_left = -26.08696
+offset_top = -21.739132
+offset_right = 20.304344
+offset_bottom = 1.2608681
+text = "Wood"
