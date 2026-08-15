@@ -10,18 +10,19 @@ var carriage_list: Array[Carriage] = []
 
 var level: int = 1
 
-var game_state : Enums.game_state = Enums.game_state.START:
+var game_state : Enums.game_state = Enums.game_state.NONE:
 	set(value):
 		if game_state == value:
 			return
 		game_state = value
 		EventBus.game_state_changed.emit(game_state, level)
 		ui_parent.visible = game_state == Enums.game_state.WASH
+		ToolsManager.set_can_interact_with_tools(game_state == Enums.game_state.WASH)
 
 signal game_state_changed(new_state: Enums.game_state, current_level : int)
 
 func _ready() -> void:
-	ui_parent.visible = false
+	game_state = Enums.game_state.START
 	carriage_list.clear()
 	for i in carriages.get_child_count():
 		var carriage: Carriage = carriages.get_child(i) as Carriage

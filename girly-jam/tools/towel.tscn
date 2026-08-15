@@ -19,3 +19,9 @@ texture = ExtResource("2_k6c5c")
 
 [node name="BubbleParticleSystem" parent="." index="2" unique_id=1660493306]
 visible = false
+
+[node name="RichTextLabel" parent="Tooltip" parent_id_path=PackedInt32Array(698040888) index="0" unique_id=2062831589]
+text = "[b]Towel[/b]
+polish scratched metal"
+
+[editable path="Tooltip"]

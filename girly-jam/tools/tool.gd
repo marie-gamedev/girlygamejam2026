@@ -1,4 +1,4 @@
-class_name Tool extends Node2D
+class_name Tool extends Area2D
 
 var starting_pos: Vector2
 
@@ -7,11 +7,22 @@ var starting_pos: Vector2
 @export var type : GlobalEnums.tools_mode
 @export var audio_player : AudioStreamPlayer2D
 
+@onready var tooltip = $Tooltip
+
 func _ready():
 	assert(type != GlobalEnums.tools_mode.NONE)
 	ToolsManager.register_tool(self)
 	starting_pos = position
 	toggle_particle_system(false)
+	mouse_entered.connect(on_mouse_entered)
+	mouse_exited.connect(on_mouse_exited)
+
+func on_mouse_entered():
+	if ToolsManager.can_interact_with_tools:
+		tooltip.toggle(true)
+	
+func on_mouse_exited():
+	tooltip.toggle(false)
 
 func toggle_particle_system(toggle: bool) -> void:
 	if toggle && !audio_player.playing:
@@ -26,11 +37,14 @@ func toggle_particle_system(toggle: bool) -> void:
 		ps.emitting = toggle
 
 func _on_input_event(_viewport, event, _shape_idx):
+	if !ToolsManager.can_interact_with_tools:
+		return
+	
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			select()
 		elif event.button_index == MOUSE_BUTTON_RIGHT:
-				deselect()
+			deselect()
 
 func select() -> void:
 	if type == ToolsManager.mode:
@@ -39,6 +53,7 @@ func select() -> void:
 	ToolsManager.deselect_old_follow_tool()
 	ToolsManager.follow_tool = self
 	ToolsManager.set_mode(type)
+	tooltip.toggle(false)
 
 func deselect() -> void:
 	print("unselected object!, mode = ", ToolsManager.mode)
