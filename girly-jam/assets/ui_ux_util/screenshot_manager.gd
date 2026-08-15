@@ -1,6 +1,6 @@
 extends Node
 
-@export var _open_folder_button : Button # disable this when running web build
+@export var _open_folder_button : Control # disable this when running web build
 
 func _ready() -> void:
 	_open_folder_button.visible = !OS.has_feature("web")

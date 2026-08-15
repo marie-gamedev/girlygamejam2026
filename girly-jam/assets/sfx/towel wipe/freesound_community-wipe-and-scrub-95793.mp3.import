@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dclk5ffi3nh17"
+path="res://.godot/imported/freesound_community-wipe-and-scrub-95793.mp3-d3051ea4262bfa7c769b5b2b3633b8e9.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/towel wipe/freesound_community-wipe-and-scrub-95793.mp3"
+dest_files=["res://.godot/imported/freesound_community-wipe-and-scrub-95793.mp3-d3051ea4262bfa7c769b5b2b3633b8e9.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

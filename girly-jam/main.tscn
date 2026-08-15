@@ -14,13 +14,13 @@
 [ext_resource type="PackedScene" uid="uid://dajc4sxk544ng" path="res://tools/fabric.tscn" id="10_efxa6"]
 [ext_resource type="PackedScene" uid="uid://xl7j2d24f6kn" path="res://tools/metal.tscn" id="11_dg77c"]
 [ext_resource type="PackedScene" uid="uid://dlxeb1urwfyfs" path="res://tools/wood.tscn" id="12_dg77c"]
-[ext_resource type="Texture2D" uid="uid://cgukefc20wbde" path="res://assets/cozy_ui/Assets/Buttons/Task.png" id="13_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://lcwspfa4m1ck" path="res://assets/cozy_ui/Assets/Buttons/Camera.png" id="14_w48qg"]
 [ext_resource type="Texture2D" uid="uid://bps5a0hjcnwhj" path="res://assets/cleaning/tool_shed.png" id="15_82xsv"]
+[ext_resource type="PackedScene" uid="uid://ok14xd3e0fxs" path="res://assets/ui_ux_util/ui_texture_button.tscn" id="16_getpj"]
+[ext_resource type="Texture2D" uid="uid://dgao2icm42cuf" path="res://assets/cozy_ui/Assets/Buttons/Press-camera.png" id="19_ryguw"]
 [ext_resource type="Script" uid="uid://bjyb65t3pljrg" path="res://assets/ui_ux_util/screenshot_manager.gd" id="20_82xsv"]
 [ext_resource type="Texture2D" uid="uid://cc5ncd2aoskgn" path="res://assets/cozy_ui/Assets/Menu Buttons/Clear Menu Buttons/Grass-Buttons-arrow2.png" id="21_getpj"]
-[ext_resource type="Script" uid="uid://bmqiqlf3xp6my" path="res://assets/ui_ux_util/tooltip_interact.gd" id="22_d13ii"]
-[ext_resource type="PackedScene" uid="uid://cj8322kj8s03m" path="res://assets/ui_ux_util/tooltip.tscn" id="22_ryguw"]
+[ext_resource type="Texture2D" uid="uid://bupelsp7s3hh0" path="res://assets/cozy_ui/Assets/Menu Buttons/Clear Menu Buttons/Pressed/Buttons-pressed-arrow2.png" id="21_ryguw"]
 
 [node name="Node2D" type="Node2D" unique_id=1190668301]
 
@@ -106,23 +106,15 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="FinishWashButton" type="Button" parent="Control" unique_id=1377453935]
+[node name="FinishWashButton" parent="Control" unique_id=1649724686 instance=ExtResource("16_getpj")]
 layout_mode = 0
-offset_left = 918.0
-offset_top = 28.0
-offset_right = 987.0
-offset_bottom = 99.0
-icon = ExtResource("13_ycdy4")
-flat = true
-script = ExtResource("22_d13ii")
+offset_left = 920.0
+offset_top = 32.0
+offset_right = 981.0
+offset_bottom = 95.0
 
-[node name="Tooltip" parent="Control/FinishWashButton" unique_id=698040888 instance=ExtResource("22_ryguw")]
-layout_mode = 0
-offset_right = 140.0
-offset_bottom = 37.0
-
-[node name="RichTextLabel" parent="Control/FinishWashButton/Tooltip" index="0" unique_id=2062831589]
-text = "finish washing!"
+[node name="RichTextLabel" parent="Control/FinishWashButton/Tooltip" parent_id_path=PackedInt32Array(1649724686, 698040888) index="0" unique_id=2062831589]
+text = "finish washing"
 
 [node name="Screenshot Util" type="Control" parent="Control" unique_id=1649747279 node_paths=PackedStringArray("_open_folder_button")]
 anchors_preset = 0
@@ -131,41 +123,31 @@ offset_bottom = 40.0
 script = ExtResource("20_82xsv")
 _open_folder_button = NodePath("ScreenshotLocationButton")
 
-[node name="ScreenshotButton" type="Button" parent="Control/Screenshot Util" unique_id=1701902716]
+[node name="ScreenshotButton" parent="Control/Screenshot Util" unique_id=528471334 instance=ExtResource("16_getpj")]
 layout_mode = 0
-offset_left = 784.0
-offset_top = 13.0
-offset_right = 882.0
-offset_bottom = 109.0
-icon = ExtResource("14_w48qg")
-flat = true
-script = ExtResource("22_d13ii")
+offset_left = 788.0
+offset_top = 16.0
+offset_right = 878.0
+offset_bottom = 104.0
+texture_normal = ExtResource("14_w48qg")
+texture_pressed = ExtResource("19_ryguw")
+texture_hover = ExtResource("19_ryguw")
 
-[node name="Tooltip" parent="Control/Screenshot Util/ScreenshotButton" unique_id=1789365695 instance=ExtResource("22_ryguw")]
-layout_mode = 0
-offset_right = 161.0
-offset_bottom = 37.0
-
-[node name="RichTextLabel" parent="Control/Screenshot Util/ScreenshotButton/Tooltip" index="0" unique_id=2062831589]
+[node name="RichTextLabel" parent="Control/Screenshot Util/ScreenshotButton/Tooltip" parent_id_path=PackedInt32Array(528471334, 698040888) index="0" unique_id=2062831589]
 text = "take a screenshot"
 
-[node name="ScreenshotLocationButton" type="Button" parent="Control/Screenshot Util" unique_id=2031449882]
+[node name="ScreenshotLocationButton" parent="Control/Screenshot Util" unique_id=1365261487 instance=ExtResource("16_getpj")]
 layout_mode = 0
-offset_left = 847.99994
-offset_top = 71.0
-offset_right = 945.99994
-offset_bottom = 167.0
-scale = Vector2(0.5064522, 0.5064522)
-icon = ExtResource("21_getpj")
-flat = true
-script = ExtResource("22_d13ii")
+offset_left = 848.0
+offset_top = 71.00001
+offset_right = 930.0
+offset_bottom = 158.0
+scale = Vector2(0.5099731, 0.5099731)
+texture_normal = ExtResource("21_getpj")
+texture_pressed = ExtResource("21_ryguw")
+texture_hover = ExtResource("21_ryguw")
 
-[node name="Tooltip" parent="Control/Screenshot Util/ScreenshotLocationButton" unique_id=480716975 instance=ExtResource("22_ryguw")]
-layout_mode = 0
-offset_right = 203.0
-offset_bottom = 37.0
-
-[node name="RichTextLabel" parent="Control/Screenshot Util/ScreenshotLocationButton/Tooltip" index="0" unique_id=2062831589]
+[node name="RichTextLabel" parent="Control/Screenshot Util/ScreenshotLocationButton/Tooltip" parent_id_path=PackedInt32Array(1365261487, 698040888) index="0" unique_id=2062831589]
 text = "open screenshot folder"
 
 [connection signal="timeout" from="GameManager/InbetweenLevelTimer" to="GameManager" method="_on_inbetween_level_timer_timeout"]
@@ -181,6 +163,9 @@ text = "open screenshot folder"
 [connection signal="pressed" from="Control/Screenshot Util/ScreenshotButton" to="Control/Screenshot Util" method="_on_take_screenshot_button_pressed"]
 [connection signal="pressed" from="Control/Screenshot Util/ScreenshotLocationButton" to="Control/Screenshot Util" method="_on_open_screenshot_folder_button_pressed"]
 
+[editable path="Control/FinishWashButton"]
 [editable path="Control/FinishWashButton/Tooltip"]
+[editable path="Control/Screenshot Util/ScreenshotButton"]
 [editable path="Control/Screenshot Util/ScreenshotButton/Tooltip"]
+[editable path="Control/Screenshot Util/ScreenshotLocationButton"]
 [editable path="Control/Screenshot Util/ScreenshotLocationButton/Tooltip"]

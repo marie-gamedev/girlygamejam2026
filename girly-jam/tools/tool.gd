@@ -5,6 +5,7 @@ var starting_pos: Vector2
 @export var particle_system: Node2D
 @export var sprite : CanvasItem # for tinting
 @export var type : GlobalEnums.tools_mode
+@export var audio_player : AudioStreamPlayer2D
 
 func _ready():
 	assert(type != GlobalEnums.tools_mode.NONE)
@@ -13,6 +14,12 @@ func _ready():
 	toggle_particle_system(false)
 
 func toggle_particle_system(toggle: bool) -> void:
+	if toggle && !audio_player.playing:
+		audio_player.play()
+	elif !toggle && audio_player.playing:
+		print("stop")
+		audio_player.stop()
+	
 	if get_child_count() == 0:
 		return
 	for ps in particle_system.get_children():

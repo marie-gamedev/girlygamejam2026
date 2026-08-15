@@ -1,4 +1,4 @@
-extends Button
+extends Control
 
 @onready var tooltip = $Tooltip
 

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://2kho1fc0314n" path="res://tools/tool.tscn" id="1_vsiwj"]
 [ext_resource type="Texture2D" uid="uid://c2heguf0hdm7w" path="res://assets/bubble.png" id="2_ntmff"]
 [ext_resource type="Texture2D" uid="uid://c5cjkuy6q8y1c" path="res://assets/bubble2.png" id="3_budxj"]
+[ext_resource type="AudioStream" uid="uid://dd4ftmbssgaxv" path="res://assets/sfx/bubbles/universfield-water-bubbling-278823.mp3" id="4_btlr4"]
 
 [sub_resource type="Gradient" id="Gradient_ntmff"]
 offsets = PackedFloat32Array(0, 0.09836066, 0.8770492, 0.9918033)
@@ -66,3 +67,6 @@ process_material = SubResource("ParticleProcessMaterial_budxj")
 
 [node name="SparkleParticleSystem" parent="." index="3" unique_id=1573862826]
 visible = false
+
+[node name="AudioStreamPlayer2D" parent="." index="4" unique_id=1904722585]
+stream = ExtResource("4_btlr4")
