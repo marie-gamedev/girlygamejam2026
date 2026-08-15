@@ -1,8 +1,9 @@
 class_name GameManager
 extends Node2D
 
+@export var ui_parent : Node2D
 @export var dialogues: BaseDialogue
-@onready var finish_wash_button = $"../Control/FinishWashButton"
+@onready var finish_wash_button = $"../UI Parent/Control/FinishWashButton"
 @onready var inbetween_level_timer = $InbetweenLevelTimer
 @onready var carriages: Node = $"../World/Carriages"
 var carriage_list: Array[Carriage] = []
@@ -15,10 +16,12 @@ var game_state : Enums.game_state = Enums.game_state.START:
 			return
 		game_state = value
 		EventBus.game_state_changed.emit(game_state, level)
+		ui_parent.visible = game_state == Enums.game_state.WASH
 
 signal game_state_changed(new_state: Enums.game_state, current_level : int)
 
-func _ready() -> void:	
+func _ready() -> void:
+	ui_parent.visible = false
 	carriage_list.clear()
 	for i in carriages.get_child_count():
 		var carriage: Carriage = carriages.get_child(i) as Carriage

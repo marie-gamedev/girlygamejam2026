@@ -28,9 +28,10 @@
 script = ExtResource("1_074og")
 game_manager = NodePath("../GameManager")
 
-[node name="GameManager" type="Node2D" parent="." unique_id=806895744 node_paths=PackedStringArray("dialogues")]
+[node name="GameManager" type="Node2D" parent="." unique_id=806895744 node_paths=PackedStringArray("ui_parent", "dialogues")]
 position = Vector2(4, 0)
 script = ExtResource("1_ig7tw")
+ui_parent = NodePath("../UI Parent")
 dialogues = NodePath("../Dialogues")
 
 [node name="InbetweenLevelTimer" type="Timer" parent="GameManager" unique_id=386911362]
@@ -100,30 +101,32 @@ scale = Vector2(0.5059286, 0.5059286)
 position = Vector2(266, 598)
 scale = Vector2(0.42184266, 0.42184266)
 
-[node name="Control" type="Control" parent="." unique_id=500166893]
+[node name="UI Parent" type="Node2D" parent="." unique_id=1667249646]
+
+[node name="Control" type="Control" parent="UI Parent" unique_id=500166893]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="FinishWashButton" parent="Control" unique_id=1649724686 instance=ExtResource("16_getpj")]
+[node name="FinishWashButton" parent="UI Parent/Control" unique_id=1649724686 instance=ExtResource("16_getpj")]
 layout_mode = 0
 offset_left = 920.0
 offset_top = 32.0
 offset_right = 981.0
 offset_bottom = 95.0
 
-[node name="RichTextLabel" parent="Control/FinishWashButton/Tooltip" parent_id_path=PackedInt32Array(1649724686, 698040888) index="0" unique_id=2062831589]
+[node name="RichTextLabel" parent="UI Parent/Control/FinishWashButton/Tooltip" parent_id_path=PackedInt32Array(1649724686, 698040888) index="0" unique_id=2062831589]
 text = "finish washing"
 
-[node name="Screenshot Util" type="Control" parent="Control" unique_id=1649747279 node_paths=PackedStringArray("_open_folder_button")]
+[node name="Screenshot Util" type="Control" parent="UI Parent/Control" unique_id=1649747279 node_paths=PackedStringArray("_open_folder_button")]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("20_82xsv")
 _open_folder_button = NodePath("ScreenshotLocationButton")
 
-[node name="ScreenshotButton" parent="Control/Screenshot Util" unique_id=528471334 instance=ExtResource("16_getpj")]
+[node name="ScreenshotButton" parent="UI Parent/Control/Screenshot Util" unique_id=528471334 instance=ExtResource("16_getpj")]
 layout_mode = 0
 offset_left = 788.0
 offset_top = 16.0
@@ -133,10 +136,10 @@ texture_normal = ExtResource("14_w48qg")
 texture_pressed = ExtResource("19_ryguw")
 texture_hover = ExtResource("19_ryguw")
 
-[node name="RichTextLabel" parent="Control/Screenshot Util/ScreenshotButton/Tooltip" parent_id_path=PackedInt32Array(528471334, 698040888) index="0" unique_id=2062831589]
+[node name="RichTextLabel" parent="UI Parent/Control/Screenshot Util/ScreenshotButton/Tooltip" parent_id_path=PackedInt32Array(528471334, 698040888) index="0" unique_id=2062831589]
 text = "take a screenshot"
 
-[node name="ScreenshotLocationButton" parent="Control/Screenshot Util" unique_id=1365261487 instance=ExtResource("16_getpj")]
+[node name="ScreenshotLocationButton" parent="UI Parent/Control/Screenshot Util" unique_id=1365261487 instance=ExtResource("16_getpj")]
 layout_mode = 0
 offset_left = 848.0
 offset_top = 71.00001
@@ -147,7 +150,7 @@ texture_normal = ExtResource("21_getpj")
 texture_pressed = ExtResource("21_ryguw")
 texture_hover = ExtResource("21_ryguw")
 
-[node name="RichTextLabel" parent="Control/Screenshot Util/ScreenshotLocationButton/Tooltip" parent_id_path=PackedInt32Array(1365261487, 698040888) index="0" unique_id=2062831589]
+[node name="RichTextLabel" parent="UI Parent/Control/Screenshot Util/ScreenshotLocationButton/Tooltip" parent_id_path=PackedInt32Array(1365261487, 698040888) index="0" unique_id=2062831589]
 text = "open screenshot folder"
 
 [connection signal="timeout" from="GameManager/InbetweenLevelTimer" to="GameManager" method="_on_inbetween_level_timer_timeout"]
@@ -159,13 +162,13 @@ text = "open screenshot folder"
 [connection signal="mouse_exited" from="World/Tools/Sewing" to="World/Tools/Sewing" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="World/Tools/Towel" to="World/Tools/Towel" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="World/Tools/Towel" to="World/Tools/Towel" method="_on_mouse_exited"]
-[connection signal="pressed" from="Control/FinishWashButton" to="GameManager" method="_on_finish_wash_button_pressed"]
-[connection signal="pressed" from="Control/Screenshot Util/ScreenshotButton" to="Control/Screenshot Util" method="_on_take_screenshot_button_pressed"]
-[connection signal="pressed" from="Control/Screenshot Util/ScreenshotLocationButton" to="Control/Screenshot Util" method="_on_open_screenshot_folder_button_pressed"]
+[connection signal="pressed" from="UI Parent/Control/FinishWashButton" to="GameManager" method="_on_finish_wash_button_pressed"]
+[connection signal="pressed" from="UI Parent/Control/Screenshot Util/ScreenshotButton" to="UI Parent/Control/Screenshot Util" method="_on_take_screenshot_button_pressed"]
+[connection signal="pressed" from="UI Parent/Control/Screenshot Util/ScreenshotLocationButton" to="UI Parent/Control/Screenshot Util" method="_on_open_screenshot_folder_button_pressed"]
 
-[editable path="Control/FinishWashButton"]
-[editable path="Control/FinishWashButton/Tooltip"]
-[editable path="Control/Screenshot Util/ScreenshotButton"]
-[editable path="Control/Screenshot Util/ScreenshotButton/Tooltip"]
-[editable path="Control/Screenshot Util/ScreenshotLocationButton"]
-[editable path="Control/Screenshot Util/ScreenshotLocationButton/Tooltip"]
+[editable path="UI Parent/Control/FinishWashButton"]
+[editable path="UI Parent/Control/FinishWashButton/Tooltip"]
+[editable path="UI Parent/Control/Screenshot Util/ScreenshotButton"]
+[editable path="UI Parent/Control/Screenshot Util/ScreenshotButton/Tooltip"]
+[editable path="UI Parent/Control/Screenshot Util/ScreenshotLocationButton"]
+[editable path="UI Parent/Control/Screenshot Util/ScreenshotLocationButton/Tooltip"]
