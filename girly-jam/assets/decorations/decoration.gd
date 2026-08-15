@@ -28,7 +28,7 @@ func _input(event: InputEvent) -> void:
 		_check_if_in_carriage_bounds()
 
 func _check_if_in_carriage_bounds() -> void:
-	var game_manager : GameManager = $"../../GameManager"
+	var game_manager : GameManager = get_tree().current_scene.get_node("GameManager")
 	if !self.overlaps_area(game_manager.carriage_list[game_manager.level - 1].area):
 		queue_free()
 	pass
