@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cjnvimlqk1xk0" path="res://assets/carriages/charm_school/Wood_Barbie_Princess_Charm_School_Carriage.png" id="3_e83hc"]
 [ext_resource type="Texture2D" uid="uid://d1phu7eny77st" path="res://assets/carriages/charm_school/Metal_Barbie_Princess_Charm_School_Carriage.png" id="4_hmbjk"]
 [ext_resource type="Texture2D" uid="uid://bpvepkstkinoo" path="res://assets/carriages/charm_school/Fabric_Barbie_Princess_Charm_School_Carriage.png" id="5_1058p"]
+[ext_resource type="Texture2D" uid="uid://b48svgouistov" path="res://assets/cleaning/dirt/Fabric_Rips_Dirt_Textures-7.png" id="6_e83hc"]
 
 [node name="Carriage_Charm_School" unique_id=575866561 instance=ExtResource("1_6df6f")]
 scale = Vector2(0.275, 0.275)
@@ -16,25 +17,28 @@ texture = ExtResource("2_34o6n")
 texture = ExtResource("3_e83hc")
 
 [node name="DirtTex" parent="Wood" parent_id_path=PackedInt32Array(830940108) index="1" unique_id=1473268579]
-scale = Vector2(4.0751657, 4.0751657)
+scale = Vector2(1.2087206, 1.2087206)
 
 [node name="CarriageTex" parent="Metal" parent_id_path=PackedInt32Array(1897144016) index="0" unique_id=1146933715]
 texture = ExtResource("4_hmbjk")
 
 [node name="DirtTex" parent="Metal" parent_id_path=PackedInt32Array(1897144016) index="1" unique_id=1473268579]
-scale = Vector2(4.1079216, 4.1079216)
+scale = Vector2(1.1914623, 1.1914623)
 
 [node name="ExtraTex" parent="Metal" parent_id_path=PackedInt32Array(1897144016) index="3" unique_id=649079568]
-scale = Vector2(0.8803412, 0.8803412)
+modulate = Color(0.27450982, 0.27450982, 0.27450982, 1)
+scale = Vector2(1.1969451, 1.1969451)
 
 [node name="CarriageTex" parent="Fabric" parent_id_path=PackedInt32Array(2123264892) index="0" unique_id=1146933715]
 texture = ExtResource("5_1058p")
 
 [node name="DirtTex" parent="Fabric" parent_id_path=PackedInt32Array(2123264892) index="1" unique_id=1473268579]
-scale = Vector2(4.091804, 4.091804)
+scale = Vector2(1.1861218, 1.1861218)
 
 [node name="ExtraTex" parent="Fabric" parent_id_path=PackedInt32Array(2123264892) index="3" unique_id=649079568]
-scale = Vector2(0.868027, 0.868027)
+modulate = Color(0.19537508, 0.033438995, 0.22812188, 1)
+scale = Vector2(1.1893688, 1.1893688)
+texture = ExtResource("6_e83hc")
 
 [editable path="Wood"]
 [editable path="Metal"]

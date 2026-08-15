@@ -5,7 +5,7 @@ extends Node2D
 @export var test_init_carriage : Carriage # only needed for test scene
 
 var last_cleaned_pos : Vector2 = Vector2.INF
-@export var tex_draw_distance = 1000
+@export var tex_draw_distance = 13000
 
 var pressed := false
 var _current_carriage_to_clean : Carriage = null
@@ -40,6 +40,8 @@ func _process(_delta: float) -> void:
 		if _active_layer:
 			var sqd = (last_cleaned_pos - mouse_pos).length_squared()
 			if last_cleaned_pos == Vector2.INF || sqd > tex_draw_distance:
+				if last_cleaned_pos != Vector2.INF:
+					pass
 				last_cleaned_pos = mouse_pos
 				_active_layer.scrub_at_global_pos(mouse_pos)
 		

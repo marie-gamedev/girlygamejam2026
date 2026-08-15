@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://x4g8q5qkvfln" path="res://assets/textures/metal.png" id="1_3q333"]
 [ext_resource type="Script" uid="uid://cnr53kqkx660i" path="res://assets/cleaning/dirt_layer.gd" id="2_r20xs"]
 [ext_resource type="Shader" uid="uid://fdn438r0gogu" path="res://assets/cleaning/dirt_shader.gdshader" id="3_xf23w"]
-[ext_resource type="Texture2D" uid="uid://sk1jkgwcb3uc" path="res://assets/textures/ONLY TEST NO LICENSEdirt-png-43606.png" id="4_yaxo0"]
+[ext_resource type="Texture2D" uid="uid://db5u5uixr8w4c" path="res://assets/cleaning/dirt/Fabric_Dirt_Textures-3.png" id="4_r20xs"]
 [ext_resource type="Script" uid="uid://bxpy2h3f5iyhl" path="res://assets/cleaning/mask.gd" id="5_8vf6l"]
-[ext_resource type="Texture2D" uid="uid://cfrdqpf0jbs7w" path="res://assets/textures/pngkey.com-scratches-png-30294.png" id="6_r20xs"]
+[ext_resource type="Texture2D" uid="uid://cqfw331xsew7o" path="res://assets/cleaning/dirt/Metal_Scratches_Dirt_Textures-10.png" id="6_xf23w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p7t0q"]
 shader = ExtResource("3_xf23w")
@@ -17,8 +17,8 @@ script = ExtResource("2_r20xs")
 required_tool = 1
 dirt_sprite = NodePath("DirtTex")
 car_sprite = NodePath("CarriageTex")
-brush_radius = 15.0
-brush_strength = 0.015
+brush_radius = 70.0
+brush_strength = 0.025
 percentage_update_interval = 0.4
 
 [node name="CarriageTex" type="Sprite2D" parent="." unique_id=1146933715]
@@ -27,9 +27,10 @@ texture = ExtResource("1_3q333")
 [node name="DirtTex" type="Sprite2D" parent="." unique_id=1473268579]
 material = SubResource("ShaderMaterial_p7t0q")
 scale = Vector2(1.1, 1.1)
-texture = ExtResource("4_yaxo0")
+texture = ExtResource("4_r20xs")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=2145549064]
+size = Vector2i(2048, 2048)
 render_target_clear_mode = 1
 render_target_update_mode = 4
 
@@ -39,16 +40,16 @@ script = ExtResource("5_8vf6l")
 [node name="ExtraTex" type="Sprite2D" parent="." unique_id=649079568 node_paths=PackedStringArray("dirt_sprite", "car_sprite")]
 material = SubResource("ShaderMaterial_p7t0q")
 scale = Vector2(0.2171026, 0.2171026)
-texture = ExtResource("6_r20xs")
+texture = ExtResource("6_xf23w")
 script = ExtResource("2_r20xs")
 dirt_sprite = NodePath(".")
 car_sprite = NodePath("../CarriageTex")
-brush_radius = 30.0
-brush_strength = 0.05
+brush_radius = 70.0
+brush_strength = 0.025
 percentage_update_interval = 0.4
 
 [node name="SubViewport" type="SubViewport" parent="ExtraTex" unique_id=739282018]
-size = Vector2i(3000, 2250)
+size = Vector2i(2048, 2048)
 render_target_clear_mode = 1
 render_target_update_mode = 4
 

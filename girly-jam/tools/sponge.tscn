@@ -70,3 +70,5 @@ visible = false
 
 [node name="AudioStreamPlayer2D" parent="." index="4" unique_id=1904722585]
 stream = ExtResource("4_btlr4")
+volume_db = -7.0
+pitch_scale = 0.9

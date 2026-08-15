@@ -10,11 +10,27 @@
 [node name="CarriageTex" parent="Wood" parent_id_path=PackedInt32Array(830940108) index="0" unique_id=1146933715]
 texture = ExtResource("2_gihob")
 
+[node name="DirtTex" parent="Wood" parent_id_path=PackedInt32Array(830940108) index="1" unique_id=1473268579]
+scale = Vector2(0.18470776, 0.18470776)
+
 [node name="CarriageTex" parent="Metal" parent_id_path=PackedInt32Array(1897144016) index="0" unique_id=1146933715]
 texture = ExtResource("3_knt3r")
 
+[node name="DirtTex" parent="Metal" parent_id_path=PackedInt32Array(1897144016) index="1" unique_id=1473268579]
+scale = Vector2(0.18272522, 0.18272522)
+
+[node name="ExtraTex" parent="Metal" parent_id_path=PackedInt32Array(1897144016) index="3" unique_id=649079568]
+scale = Vector2(0.18382539, 0.18382539)
+
 [node name="CarriageTex" parent="Fabric" parent_id_path=PackedInt32Array(2123264892) index="0" unique_id=1146933715]
 texture = ExtResource("4_j5fyc")
+
+[node name="DirtTex" parent="Fabric" parent_id_path=PackedInt32Array(2123264892) index="1" unique_id=1473268579]
+scale = Vector2(0.18207312, 0.18207312)
+
+[node name="ExtraTex" parent="Fabric" parent_id_path=PackedInt32Array(2123264892) index="3" unique_id=649079568]
+modulate = Color(0.5006972, 0.37622786, 0.5839409, 1)
+scale = Vector2(0.17634784, 0.17634784)
 
 [editable path="Wood"]
 [editable path="Metal"]

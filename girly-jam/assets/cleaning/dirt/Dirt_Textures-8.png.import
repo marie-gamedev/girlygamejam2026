@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfrdqpf0jbs7w"
-path="res://.godot/imported/pngkey.com-scratches-png-30294.png-158f1937943de87a489a5ef55b7c66ca.ctex"
+uid="uid://o66pis3t3hr0"
+path="res://.godot/imported/Dirt_Textures-8.png-fd0067a5fa90574a60c255df4b002325.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/pngkey.com-scratches-png-30294.png"
-dest_files=["res://.godot/imported/pngkey.com-scratches-png-30294.png-158f1937943de87a489a5ef55b7c66ca.ctex"]
+source_file="res://assets/cleaning/dirt/Dirt_Textures-8.png"
+dest_files=["res://.godot/imported/Dirt_Textures-8.png-fd0067a5fa90574a60c255df4b002325.ctex"]
 
 [params]
 

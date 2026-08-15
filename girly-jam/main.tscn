@@ -85,7 +85,7 @@ position = Vector2(117, 683)
 
 [node name="Sponge" parent="World/Tools" unique_id=1176703255 instance=ExtResource("5_lquwl")]
 position = Vector2(272, 366)
-scale = Vector2(0.64305025, 0.64305025)
+scale = Vector2(0.48504713, 0.48504713)
 
 [node name="Brush" parent="World/Tools" unique_id=1391043698 instance=ExtResource("7_kek77")]
 visible = false
@@ -98,7 +98,7 @@ scale = Vector2(0.5059286, 0.5059286)
 
 [node name="Towel" parent="World/Tools" unique_id=2717972 instance=ExtResource("9_efxa6")]
 position = Vector2(266, 598)
-scale = Vector2(0.4777976, 0.4777976)
+scale = Vector2(0.42184266, 0.42184266)
 
 [node name="Control" type="Control" parent="." unique_id=500166893]
 layout_mode = 3
