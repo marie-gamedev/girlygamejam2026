@@ -48,3 +48,9 @@ func emit_particles(value : bool) -> void:
 	if follow_tool:
 		value = value && follow_tool.check_particle_requirements()
 		follow_tool.toggle_particle_system(value)
+
+func reset() -> void:
+	deselect_old_follow_tool()
+	set_mode(Enums.tools_mode.NONE)
+	set_bucket_mode(Enums.bucket_mode.NONE)
+	_tools.clear()

@@ -49,7 +49,7 @@ func _ready() -> void:
 	
 	await dialogues.play_dialogue(Enums.dialogue_states.KYLE, "ending")
 	
-	get_tree().change_scene_to_file("res://menu.tscn")
+	return_to_menu()
 
 func _start_level(lvl: int) -> void:
 	level = lvl
@@ -98,6 +98,12 @@ func get_dialogue_per_level(lvl: int) -> Enums.dialogue_states:
 func wait_for_game_state(target_state: Enums.game_state) -> void:
 	while game_state != target_state:
 		await EventBus.game_state_changed
+
+func return_to_menu() -> void:
+	#clear autoloads info
+	ToolsManager.reset()
+	
+	get_tree().change_scene_to_file("res://menu.tscn")
 
 func _on_finish_wash_button_pressed():
 	set_game_state(Enums.game_state.POSTDIALOGUE)

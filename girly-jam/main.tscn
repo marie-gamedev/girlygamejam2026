@@ -43,8 +43,6 @@
 [ext_resource type="PackedScene" uid="uid://djdr0g3ap5dyn" path="res://assets/decorations/deco_butterfly-5.tscn" id="39_0n3wm"]
 [ext_resource type="PackedScene" uid="uid://cjb3srxs484iy" path="res://assets/decorations/deco_butterfly-6.tscn" id="41_qnost"]
 [ext_resource type="Script" uid="uid://lpp3kktotxv" path="res://assets/decorations/deco_parent.gd" id="43_d2t1y"]
-[ext_resource type="PackedScene" uid="uid://bse3nisyqxjs7" path="res://assets/ui_ux_util/ui_check_button.tscn" id="43_gngh3"]
-[ext_resource type="Texture2D" uid="uid://dv4wvujcfjgt7" path="res://assets/fullscreen.png" id="44_0n3wm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w12w5"]
 content_margin_left = 12.0
@@ -121,10 +119,10 @@ texture = ExtResource("15_82xsv")
 position = Vector2(76, 685.00006)
 
 [node name="Fabric" parent="World/Tools/Buckets" unique_id=318050728 instance=ExtResource("10_efxa6")]
-position = Vector2(76, 690)
+position = Vector2(76, 693)
 
 [node name="Wood" parent="World/Tools/Buckets" unique_id=965140780 instance=ExtResource("12_dg77c")]
-position = Vector2(86, 688.00006)
+position = Vector2(78.00001, 688)
 
 [node name="Sponge" parent="World/Tools" unique_id=1176703255 instance=ExtResource("5_lquwl")]
 position = Vector2(272, 366)
@@ -311,18 +309,6 @@ texture = ExtResource("36_4lmeg")
 expand_mode = 0
 stretch_mode = 3
 
-[node name="FullScreenButton" parent="UI Parent/Control" unique_id=1369015052 instance=ExtResource("43_gngh3")]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 9.0
-offset_right = 50.0
-offset_bottom = 33.0
-
-[node name="Fullscreen" type="Sprite2D" parent="UI Parent/Control/FullScreenButton" unique_id=433100810]
-position = Vector2(61, 14.000002)
-scale = Vector2(0.076171935, 0.076171935)
-texture = ExtResource("44_0n3wm")
-
 [node name="DecorationsParent" type="Node2D" parent="." unique_id=534529263]
 script = ExtResource("43_d2t1y")
 
@@ -339,7 +325,6 @@ script = ExtResource("43_d2t1y")
 [connection signal="pressed" from="UI Parent/Control/Screenshot Util/ScreenshotButton" to="UI Parent/Control/Screenshot Util" method="_on_take_screenshot_button_pressed"]
 [connection signal="pressed" from="UI Parent/Control/Screenshot Util/ScreenshotLocationButton" to="UI Parent/Control/Screenshot Util" method="_on_open_screenshot_folder_button_pressed"]
 [connection signal="pressed" from="UI Parent/Control/DecorationsButton" to="UI Parent/Control/DecorationsPanel" method="deco_store_button_pressed"]
-[connection signal="toggled" from="UI Parent/Control/FullScreenButton" to="GameManager" method="_on_full_screen_button_toggled"]
 
 [editable path="UI Parent/Control/FinishWashButton"]
 [editable path="UI Parent/Control/FinishWashButton/Tooltip"]
@@ -358,5 +343,3 @@ script = ExtResource("43_d2t1y")
 [editable path="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-4"]
 [editable path="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-5"]
 [editable path="UI Parent/Control/DecorationsPanel/MarginContainer/GridContainer/Butterfly-6"]
-[editable path="UI Parent/Control/FullScreenButton"]
-[editable path="UI Parent/Control/FullScreenButton/Tooltip"]

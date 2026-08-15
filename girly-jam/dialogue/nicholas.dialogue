@@ -12,7 +12,7 @@ Prince Nicholas: into.. what?
 Prince Nicholas: Well.. [wait=1] done! ha ha
 Prince Nicholas: So, I am finally getting married to my blair, maiden of.. [wait=1] yea you get the gist!
 Prince Nicholas: And I need this carriage cleaned and prepped for the wedding, please!
-- Okay, got it! (curtsies)
+- Okay, got it!
 => END
 
 #To do
@@ -20,7 +20,7 @@ Prince Nicholas: And I need this carriage cleaned and prepped for the wedding, p
 Prince Nicholas: that's kinda ass..
 
 ~ postdialogue
-Prince Nicholas: Bonnie, maiden of [wait=1] washadia, I extend my heartfelt thanks to you and your royal carriage washing services.
+Prince Nicholas: Bonnie, maiden of.. washadia, I extend my heartfelt thanks to you and your royal carriage washing services.
 Prince Nicholas: You, M'lady and Prince Kyle will forever have my utmost gratitude!
 - (giggles) I, kind swain..
 	Prince Nicholas: mhm?
@@ -35,7 +35,7 @@ Prince Nicholas: You, M'lady and Prince Kyle will forever have my utmost gratitu
 	- It has been my great pleasure..
 	Prince Nicholas: There's more??
 	- ..to be of service to you.
-	Prince Nicholas: Okay, okay, [wait=1] you win! Thank you again, Bonnie!
+	Prince Nicholas: Okay, okay, you win! Thank you again, Bonnie!
 	=> END
 - no problemo
 Prince Nicholas: Ha ha, alright
