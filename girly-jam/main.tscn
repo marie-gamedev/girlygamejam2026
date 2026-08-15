@@ -105,7 +105,7 @@ scale = Vector2(0.7977114, 0.7977114)
 position = Vector2(709.9446, 226.32617)
 scale = Vector2(0.12523077, 0.12523077)
 
-[node name="Tools" type="Node2D" parent="World" unique_id=1419158990]
+[node name="Tools" type="Node2D" parent="World" unique_id=1419158990 groups=["screenshot_exclude"]]
 scale = Vector2(0.4553846, 0.4553846)
 
 [node name="ToolShed" type="Sprite2D" parent="World/Tools" unique_id=168591242]
@@ -141,7 +141,7 @@ scale = Vector2(0.5059286, 0.5059286)
 position = Vector2(266, 598)
 scale = Vector2(0.42184266, 0.42184266)
 
-[node name="UI Parent" type="Node2D" parent="." unique_id=1667249646]
+[node name="UI Parent" type="Node2D" parent="." unique_id=1667249646 groups=["screenshot_exclude"]]
 
 [node name="Control" type="Control" parent="UI Parent" unique_id=500166893]
 layout_mode = 3
@@ -159,12 +159,13 @@ offset_bottom = 95.0
 [node name="RichTextLabel" parent="UI Parent/Control/FinishWashButton/Tooltip" parent_id_path=PackedInt32Array(1649724686, 698040888) index="0" unique_id=2062831589]
 text = "finish washing"
 
-[node name="Screenshot Util" type="Control" parent="UI Parent/Control" unique_id=1649747279 node_paths=PackedStringArray("_open_folder_button")]
+[node name="Screenshot Util" type="Control" parent="UI Parent/Control" unique_id=1649747279 node_paths=PackedStringArray("_open_folder_button", "game_manager")]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("20_82xsv")
 _open_folder_button = NodePath("ScreenshotLocationButton")
+game_manager = NodePath("../../../GameManager")
 
 [node name="ScreenshotButton" parent="UI Parent/Control/Screenshot Util" unique_id=528471334 instance=ExtResource("16_getpj")]
 layout_mode = 0

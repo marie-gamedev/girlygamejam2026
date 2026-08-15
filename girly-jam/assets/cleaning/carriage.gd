@@ -1,5 +1,5 @@
 class_name Carriage
-extends Node
+extends Node2D
 
 @export var layers: Array[DirtLayer] = []
 @export var sprite: Sprite2D

@@ -22,7 +22,6 @@ var game_state : Enums.game_state = Enums.game_state.NONE:
 		if game_state == Enums.game_state.WASH:
 			decoration_parent.detach_from_carriage()
 			decoration_parent.remove_all_children()
-		elif game_state == Enums.game_state.POSTDIALOGUE:
 			decoration_parent.attach_to_carriage(carriage_list[level - 1])
 
 signal game_state_changed(new_state: Enums.game_state, current_level : int)

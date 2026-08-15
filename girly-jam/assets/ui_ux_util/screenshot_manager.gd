@@ -1,15 +1,45 @@
 extends Node
 
 @export var _open_folder_button : Control # disable this when running web build
+@export var game_manager : GameManager
+
+const exclude_group_name : String = "screenshot_exclude"
 
 func _ready() -> void:
 	_open_folder_button.visible = !OS.has_feature("web")
 
 func _on_take_screenshot_button_pressed():
-	take_screenshot()
+	var carriage = game_manager.carriage_list[game_manager.level - 1]
+	var carriage_start_pos = carriage.global_position
+	var center_pos = get_viewport().get_visible_rect().size / 2
+	center_pos.y = carriage_start_pos.y
+	carriage.global_position = center_pos
+	
+	var previous_visibility = disable_group()
+	await take_screenshot()
+	enable_group(previous_visibility)
+	
+	carriage.global_position = carriage_start_pos
 	
 func _on_open_screenshot_folder_button_pressed():
 	_open_screenshot_folder()
+
+func disable_group() -> Dictionary:
+	var excluded_nodes := get_tree().get_nodes_in_group(exclude_group_name)
+	var previous_visibility: Dictionary = {}
+
+	for node in excluded_nodes:
+		if node is CanvasItem:
+			previous_visibility[node] = node.visible
+			node.visible = false
+	
+	return previous_visibility
+
+func enable_group(previous_visibility : Dictionary) -> void:
+	var excluded_nodes := get_tree().get_nodes_in_group(exclude_group_name)
+	for node in excluded_nodes:
+		if previous_visibility.has(node):
+			node.visible = previous_visibility[node]
 
 func take_screenshot() -> void:
 	# Wait one frame so the viewport is fully rendered before we grab it
