@@ -8,3 +8,11 @@ func on_button_hovered() -> void:
 
 func on_button_pressed() -> void:
 	click_sound.play()
+
+
+func _on_check_button_pressed():
+	pass # Replace with function body.
+
+
+func _on_check_button_mouse_entered():
+	pass # Replace with function body.

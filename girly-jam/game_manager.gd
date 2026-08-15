@@ -105,3 +105,9 @@ func _on_finish_wash_button_pressed():
 
 func _on_inbetween_level_timer_timeout():
 	set_game_state(Enums.game_state.PREDIALOGUE)
+
+func _on_full_screen_button_toggled(toggled_on):
+	if toggled_on:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)

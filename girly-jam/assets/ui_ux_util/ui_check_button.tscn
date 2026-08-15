@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bse3nisyqxjs7"]
+
+[ext_resource type="Script" uid="uid://bmqiqlf3xp6my" path="res://assets/ui_ux_util/tooltip_interact.gd" id="1_prnqd"]
+[ext_resource type="PackedScene" uid="uid://cj8322kj8s03m" path="res://assets/ui_ux_util/tooltip.tscn" id="2_vftag"]
+[ext_resource type="Script" uid="uid://bhpar8gijg3y" path="res://assets/ui_ux_util/button_sfx.gd" id="3_bda7y"]
+[ext_resource type="AudioStream" uid="uid://cvubmemubnw43" path="res://assets/sfx/ui/freesound_community-ui-click-43196.mp3" id="4_h4mnx"]
+[ext_resource type="AudioStream" uid="uid://dsjw527cwbao" path="res://assets/sfx/ui/r0t0r-click-151673.mp3" id="5_8nwub"]
+
+[node name="CheckButton" type="CheckButton" unique_id=1369015052]
+offset_left = 9.0
+offset_top = 28.0
+offset_right = 53.0
+offset_bottom = 52.0
+script = ExtResource("1_prnqd")
+
+[node name="Tooltip" parent="." unique_id=698040888 instance=ExtResource("2_vftag")]
+layout_mode = 0
+offset_right = 201.0
+offset_bottom = 37.0
+
+[node name="RichTextLabel" parent="Tooltip" index="0" unique_id=2062831589]
+text = "toggle fullscreen mode"
+
+[node name="ButtonSounds" type="Node2D" parent="." unique_id=654046882 node_paths=PackedStringArray("hover_sound", "click_sound")]
+script = ExtResource("3_bda7y")
+hover_sound = NodePath("hover")
+click_sound = NodePath("click")
+
+[node name="hover" type="AudioStreamPlayer2D" parent="ButtonSounds" unique_id=107204660]
+stream = ExtResource("4_h4mnx")
+bus = &"SFX"
+
+[node name="click" type="AudioStreamPlayer2D" parent="ButtonSounds" unique_id=444788249]
+stream = ExtResource("5_8nwub")
+bus = &"SFX"
+
+[connection signal="mouse_entered" from="." to="ButtonSounds" method="_on_check_button_mouse_entered"]
+[connection signal="pressed" from="." to="ButtonSounds" method="_on_check_button_pressed"]
+
+[editable path="Tooltip"]

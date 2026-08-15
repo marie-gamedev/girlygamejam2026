@@ -84,6 +84,15 @@ offset_bottom = 619.00024
 theme = SubResource("Theme_0ijca")
 text = "QUIT"
 
+[node name="Button_Fullscreen" type="Button" parent="Control" unique_id=1978344563]
+layout_mode = 0
+offset_left = 674.00006
+offset_top = 800.0
+offset_right = 1024.0012
+offset_bottom = 900.00024
+theme = SubResource("Theme_0ijca")
+text = "PLAY"
+
 [node name="Star" type="Sprite2D" parent="Control" unique_id=1524546649]
 visible = false
 position = Vector2(512, 400)
