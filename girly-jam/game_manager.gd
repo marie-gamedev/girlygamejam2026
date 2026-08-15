@@ -49,7 +49,7 @@ func _ready() -> void:
 	
 	await dialogues.play_dialogue(Enums.dialogue_states.KYLE, "ending")
 	
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://menu.tscn")
 
 func _start_level(lvl: int) -> void:
 	level = lvl
