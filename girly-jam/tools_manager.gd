@@ -4,11 +4,15 @@ var _tools: Dictionary = {} # ToolType -> Tool
 
 var mode : Enums.tools_mode
 var bucket_mode : Enums.bucket_mode
+var can_interact_with_tools : bool
 
 var follow_tool : Tool
 
-func _ready():
-	pass # Replace with function body.
+func set_can_interact_with_tools(value : bool):
+	can_interact_with_tools = value
+	if !value:
+		deselect_old_follow_tool()
+	print("can interact with tools: ", value)
 
 func _process(_delta):
 	if follow_tool:

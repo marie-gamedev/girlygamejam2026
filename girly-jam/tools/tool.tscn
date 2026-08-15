@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c6o6i2ykqr12" path="res://tools/tool.gd" id="1_f6vxs"]
 [ext_resource type="Texture2D" uid="uid://dnf57hmvmkjdq" path="res://assets/tools/sponge.png" id="2_3gk12"]
 [ext_resource type="Texture2D" uid="uid://syo2a5vrtlrl" path="res://assets/particles/Sparkles-2.png" id="4_h2ilu"]
+[ext_resource type="PackedScene" uid="uid://cj8322kj8s03m" path="res://assets/ui_ux_util/tooltip.tscn" id="5_h2ilu"]
 [ext_resource type="AudioStream" uid="uid://dclk5ffi3nh17" path="res://assets/sfx/towel wipe/freesound_community-wipe-and-scrub-95793.mp3" id="5_lcxww"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gk12"]
@@ -57,4 +58,14 @@ position = Vector2(-8, 56)
 stream = ExtResource("5_lcxww")
 bus = &"SFX"
 
+[node name="Tooltip" parent="." unique_id=698040888 instance=ExtResource("5_h2ilu")]
+offset_right = 121.0
+offset_bottom = 60.0
+
+[node name="RichTextLabel" parent="Tooltip" index="0" unique_id=2062831589]
+text = "[b]Tool[/b]
+used for XYZ"
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+
+[editable path="Tooltip"]

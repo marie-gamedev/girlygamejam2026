@@ -23,3 +23,9 @@ visible = false
 
 [node name="AudioStreamPlayer2D" parent="." index="4" unique_id=1904722585]
 stream = ExtResource("3_hlmpg")
+
+[node name="RichTextLabel" parent="Tooltip" parent_id_path=PackedInt32Array(698040888) index="0" unique_id=2062831589]
+text = "[b]Sewing Kit[/b]
+patch up torn fabric"
+
+[editable path="Tooltip"]
