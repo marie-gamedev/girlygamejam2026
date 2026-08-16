@@ -75,6 +75,6 @@ pitch_scale = 0.9
 
 [node name="RichTextLabel" parent="Tooltip" parent_id_path=PackedInt32Array(698040888) index="0" unique_id=2062831589]
 text = "[b]Sponge[/b]
-soak in a cleaning solution and clean the corrsponding surface"
+soak in a cleaning solution and clean the corresponding surface"
 
 [editable path="Tooltip"]
