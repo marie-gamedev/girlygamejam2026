@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dacou1px6ke7s"]
+
+[ext_resource type="Script" uid="uid://dgus0elw7fagt" path="res://assets/decorations/decoration.gd" id="1_y6uwt"]
+[ext_resource type="Texture2D" uid="uid://bu7ktjxuh4a5m" path="res://assets/particles/Sparkles-1.png" id="2_d6vgi"]
+[ext_resource type="Texture2D" uid="uid://syo2a5vrtlrl" path="res://assets/particles/Sparkles-2.png" id="3_8p3cn"]
+
+[sub_resource type="Curve" id="Curve_cownd"]
+_data = [Vector2(1e-05, 0), 0.0, 0.0, 0, 0, Vector2(0.06766917, 0.90625), 0.0, 0.0, 0, 0, Vector2(0.49373433, 1), 0.0, 0.0, 0, 0, Vector2(0.9423559, 0.875), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_r2cmo"]
+curve = SubResource("Curve_cownd")
+
+[sub_resource type="Curve" id="Curve_otyic"]
+_data = [Vector2(0, 0.38125002), 0.0, 0.10687496, 0, 1, Vector2(0.52631575, 0.4375), 0.0, -0.21111114, 0, 1, Vector2(1, 0.33749998), -0.21111114, 0.0, 1, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_wpau3"]
+curve = SubResource("Curve_otyic")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7rc71"]
+lifetime_randomness = 0.2
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.19999999
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_wpau3")
+alpha_curve = SubResource("CurveTexture_r2cmo")
+
+[node name="Decoration" type="Area2D" unique_id=1933163831]
+scale = Vector2(0.54875517, 0.54875517)
+script = ExtResource("1_y6uwt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=274039620]
+polygon = PackedVector2Array(-96, 100, -104, -111, 121, -105, 125, 99)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1357467489]
+amount = 2
+amount_ratio = 0.7889
+texture = ExtResource("2_d6vgi")
+lifetime = 0.8
+randomness = 0.45
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_7rc71")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="." unique_id=97231890]
+amount = 2
+amount_ratio = 0.7889
+texture = ExtResource("3_8p3cn")
+lifetime = 0.8
+randomness = 0.45
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_7rc71")
