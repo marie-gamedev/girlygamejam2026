@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b884galvtix28" path="res://assets/carriages/princesspauper/outline_bg.png" id="3_523sg"]
 [ext_resource type="Texture2D" uid="uid://cxa4kle5o54ak" path="res://assets/cleaning/dirt/Dirt_Textures-1.png" id="4_6yglv"]
 [ext_resource type="Texture2D" uid="uid://cbya8285vowtn" path="res://assets/cleaning/dirt/Dirt_Textures-9.png" id="5_necxr"]
-[ext_resource type="Texture2D" uid="uid://vpohyx17ou2" path="res://assets/cleaning/dirt/Fabric_Dirt_Textures-4.png" id="7_5xc2e"]
+[ext_resource type="Texture2D" uid="uid://bp1mw26m16ioo" path="res://assets/cleaning/dirt/Metal scratches.png" id="6_6yglv"]
 [ext_resource type="Texture2D" uid="uid://cr31r2uol7fym" path="res://assets/cleaning/dirt/Fabric_Rips_Dirt_Textures-6.png" id="8_5o23w"]
 
 [node name="Carriage" type="Node2D" unique_id=575866561 node_paths=PackedStringArray("layers", "sprite", "area")]
@@ -33,11 +33,12 @@ script = null
 material_type = 2
 
 [node name="DirtTex" parent="Metal" index="1" unique_id=1473268579]
-modulate = Color(0.5882353, 0.5529412, 0.53333336, 1)
+modulate = Color(0.48827738, 0.30888608, 0.22476944, 1)
 texture = ExtResource("5_necxr")
 
 [node name="ExtraTex" parent="Metal" index="3" unique_id=649079568]
-modulate = Color(0.27450982, 0.27450982, 0.27450982, 1)
+modulate = Color(0.34117648, 0.34117648, 0.34117648, 0.7882353)
+texture = ExtResource("6_6yglv")
 material_type = 2
 required_tool = 2
 
@@ -46,7 +47,7 @@ material_type = 3
 
 [node name="DirtTex" parent="Fabric" index="1" unique_id=1473268579]
 modulate = Color(0.45490196, 0.2784314, 0.15686275, 1)
-texture = ExtResource("7_5xc2e")
+texture = ExtResource("5_necxr")
 
 [node name="ExtraTex" parent="Fabric" index="3" unique_id=649079568]
 modulate = Color(0.16470589, 0.10980392, 0.14509805, 1)
