@@ -6,11 +6,13 @@ class_name DirtLayer
 @export var dirt_sprite: Sprite2D
 @export var car_sprite: Sprite2D
 @export var brush_radius: float = 50.0
-@export var brush_strength: float = 0.2 # opacity removed per pass, 0..1
+@export var brush_strength_per_sec: float = 2
 @export var percentage_update_interval: float = 0.2
 
 @onready var sub_viewport: SubViewport = $SubViewport
 @onready var drawing: Node2D = $SubViewport/Drawing
+
+var _last_scrub_time := -INF
 
 var dirt_img: Image
 var car_img: Image
@@ -75,8 +77,18 @@ func _process(delta: float) -> void:
 
 # called externally by CleaningController only when this layer's tool is active
 func scrub_at_global_pos(global_pos: Vector2) -> void:
+	var now := Time.get_ticks_msec() / 1000.0
+	var elapsed := now - _last_scrub_time
+	if _last_scrub_time == -INF:
+		elapsed = 0.0
+	_last_scrub_time = now
+
+	var strength : float = clamp(brush_strength_per_sec * elapsed, 0.0, 1.0)
+	if strength <= 0.0:
+		return
+
 	var tex_pos := _global_to_texture_pos(global_pos)
-	drawing.draw_at(tex_pos, brush_radius, brush_strength)
+	drawing.draw_at(tex_pos, brush_radius, strength)
 	sub_viewport.render_target_update_mode = SubViewport.UPDATE_ONCE
 	_dirty = true
 
