@@ -1,6 +1,7 @@
 extends CanvasLayer
 ## A basic dialogue balloon for use with Dialogue Manager.
 
+@export var ui_sound_player : AudioStreamPlayer
 
 ## The dialogue resource
 @export var dialogue_resource: DialogueResource
@@ -131,6 +132,8 @@ func apply_dialogue_line() -> void:
 	is_waiting_for_input = false
 	balloon.focus_mode = Control.FOCUS_ALL
 	balloon.grab_focus()
+	
+	ui_sound_player.play()
 
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
@@ -218,6 +221,7 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
+	ui_sound_player.play()
 	next(response.next_id)
 
 

@@ -43,6 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://djdr0g3ap5dyn" path="res://assets/decorations/deco_butterfly-5.tscn" id="39_0n3wm"]
 [ext_resource type="PackedScene" uid="uid://cjb3srxs484iy" path="res://assets/decorations/deco_butterfly-6.tscn" id="41_qnost"]
 [ext_resource type="Script" uid="uid://lpp3kktotxv" path="res://assets/decorations/deco_parent.gd" id="43_d2t1y"]
+[ext_resource type="AudioStream" uid="uid://b28b16bs51ye2" path="res://assets/music/alba_mac-match-176806.mp3" id="44_gngh3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w12w5"]
 content_margin_left = 12.0
@@ -308,6 +309,11 @@ stretch_mode = 3
 
 [node name="DecorationsParent" type="Node2D" parent="." unique_id=534529263]
 script = ExtResource("43_d2t1y")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=420913118]
+stream = ExtResource("44_gngh3")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="mouse_entered" from="World/Tools/Sponge" to="World/Tools/Sponge" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="World/Tools/Sponge" to="World/Tools/Sponge" method="_on_mouse_exited"]

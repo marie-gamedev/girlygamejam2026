@@ -3,6 +3,7 @@
 ## A [Container] for dialogue responses provided by [b]Dialogue Manager[/b].
 class_name DialogueResponsesMenu extends Container
 
+@export var ui_audio_player : AudioStreamPlayer
 
 ## Emitted when a response is focused.
 signal response_focused(response: Control)
@@ -50,7 +51,7 @@ func _ready() -> void:
 		response_template.hide()
 
 	get_viewport().gui_focus_changed.connect(_on_focus_changed)
-
+	response_template.mouse_entered.connect(func(): ui_audio_player.play())
 
 ## Get the selectable items in the menu.
 func get_menu_items() -> Array:

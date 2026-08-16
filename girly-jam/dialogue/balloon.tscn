@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 [ext_resource type="Texture2D" uid="uid://di5x3s1ikn7ak" path="res://assets/icon.svg" id="5_0hx7h"]
+[ext_resource type="AudioStream" uid="uid://cvubmemubnw43" path="res://assets/sfx/ui/freesound_community-ui-click-43196.mp3" id="6_267us"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 border_width_left = 3
@@ -106,9 +107,10 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
-[node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376]
+[node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376 node_paths=PackedStringArray("ui_sound_player")]
 layer = 100
 script = ExtResource("1_36de5")
+ui_sound_player = NodePath("ui AudioStreamPlayer2D")
 
 [node name="Portrait" type="TextureRect" parent="." unique_id=1775106335]
 unique_name_in_owner = true
@@ -193,7 +195,7 @@ polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
 libraries/ = SubResource("AnimationLibrary_1337t")
 autoplay = &"progress"
 
-[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" unique_id=966297223 node_paths=PackedStringArray("response_template")]
+[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" unique_id=966297223 node_paths=PackedStringArray("ui_audio_player", "response_template")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -211,6 +213,7 @@ size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
 script = ExtResource("3_72ixx")
+ui_audio_player = NodePath("../../ui AudioStreamPlayer2D")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]
@@ -232,6 +235,9 @@ alignment = 0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]
 unique_name_in_owner = true
+
+[node name="ui AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=35863571]
+stream = ExtResource("6_267us")
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

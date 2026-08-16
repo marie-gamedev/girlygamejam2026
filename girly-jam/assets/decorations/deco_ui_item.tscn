@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cvpal2mma7vek" path="res://assets/cozy_ui/Assets/Menu Buttons/Clear Menu Buttons/Butto.png" id="1_ptxud"]
 [ext_resource type="Texture2D" uid="uid://cxk8kqjgc8pwo" path="res://assets/decorations/Ribbon-1.png" id="1_rx7ns"]
 [ext_resource type="Texture2D" uid="uid://bjkcrnbi1cuto" path="res://assets/cozy_ui/Assets/Menu Buttons/Clear Menu Buttons/Pressed/Butto-pressed.png" id="2_ouy8q"]
+[ext_resource type="Script" uid="uid://bhpar8gijg3y" path="res://assets/ui_ux_util/button_sfx.gd" id="5_emjbk"]
+[ext_resource type="AudioStream" uid="uid://cvubmemubnw43" path="res://assets/sfx/ui/freesound_community-ui-click-43196.mp3" id="6_ntdlb"]
+[ext_resource type="AudioStream" uid="uid://dsjw527cwbao" path="res://assets/sfx/ui/r0t0r-click-151673.mp3" id="7_wa1a8"]
 
 [node name="Item" type="TextureButton" unique_id=1467629999]
 custom_minimum_size = Vector2(100, 100)
@@ -34,4 +37,19 @@ texture = ExtResource("1_rx7ns")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="ButtonSounds" type="Node2D" parent="." unique_id=735082983 node_paths=PackedStringArray("hover_sound", "click_sound")]
+script = ExtResource("5_emjbk")
+hover_sound = NodePath("hover")
+click_sound = NodePath("click")
+
+[node name="hover" type="AudioStreamPlayer2D" parent="ButtonSounds" unique_id=2062961065]
+stream = ExtResource("6_ntdlb")
+bus = &"SFX"
+
+[node name="click" type="AudioStreamPlayer2D" parent="ButtonSounds" unique_id=1728660479]
+stream = ExtResource("7_wa1a8")
+bus = &"SFX"
+
+[connection signal="mouse_entered" from="." to="ButtonSounds" method="on_button_hovered"]
 [connection signal="pressed" from="." to="." method="pressed"]
+[connection signal="pressed" from="." to="ButtonSounds" method="on_button_pressed"]
