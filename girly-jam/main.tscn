@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://df2u1xd8e6ds8" path="res://assets/cleaning/cleaning_controller.gd" id="1_074og"]
 [ext_resource type="Script" uid="uid://ddy636gaojouq" path="res://game_manager.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c8wunoa3kjlkn" path="res://dialogue/dialogues.tscn" id="2_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://dxit0nxc58gab" path="res://assets/background.jpg" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://c3ptfrli3w8h0" path="res://tools/sponge.tscn" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://b2k684vr0gr7v" path="res://assets/stone-floor.png" id="5_vivmo"]
 [ext_resource type="PackedScene" uid="uid://qmcoefgn4a5h" path="res://assets/carriages/princesspauper/carriage_princess_pauper.tscn" id="6_cegan"]
@@ -43,6 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://djdr0g3ap5dyn" path="res://assets/decorations/deco_butterfly-5.tscn" id="39_0n3wm"]
 [ext_resource type="PackedScene" uid="uid://cjb3srxs484iy" path="res://assets/decorations/deco_butterfly-6.tscn" id="41_qnost"]
 [ext_resource type="Script" uid="uid://lpp3kktotxv" path="res://assets/decorations/deco_parent.gd" id="43_d2t1y"]
+[ext_resource type="Texture2D" uid="uid://tusncuvg7daq" path="res://assets/Sky.png" id="44_0n3wm"]
 [ext_resource type="AudioStream" uid="uid://b28b16bs51ye2" path="res://assets/music/alba_mac-match-176806.mp3" id="44_gngh3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w12w5"]
@@ -81,11 +81,6 @@ decoration_parent = NodePath("../DecorationsParent")
 scale = Vector2(2.195946, 2.195946)
 
 [node name="Visuals" type="Node2D" parent="World" unique_id=1462984489]
-
-[node name="Background" type="Sprite2D" parent="World/Visuals" unique_id=386525730]
-position = Vector2(148, 172.13539)
-scale = Vector2(1.1621035, 1.1621037)
-texture = ExtResource("3_h2yge")
 
 [node name="StoneFloor" type="Sprite2D" parent="World/Visuals" unique_id=707534679]
 position = Vector2(229.05847, 176.68924)
@@ -314,6 +309,12 @@ script = ExtResource("43_d2t1y")
 stream = ExtResource("44_gngh3")
 volume_db = -10.0
 autoplay = true
+
+[node name="Sky" type="Sprite2D" parent="." unique_id=464859]
+z_index = -20
+position = Vector2(521.00006, 327)
+scale = Vector2(0.60000026, 0.6000001)
+texture = ExtResource("44_0n3wm")
 
 [connection signal="mouse_entered" from="World/Tools/Sponge" to="World/Tools/Sponge" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="World/Tools/Sponge" to="World/Tools/Sponge" method="_on_mouse_exited"]
