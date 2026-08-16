@@ -40,7 +40,7 @@ scale = Vector2(1.1893688, 1.1893688)
 texture = ExtResource("6_e83hc")
 
 [node name="CollisionPolygon2D" parent="Area2D" parent_id_path=PackedInt32Array(1676938615) index="0" unique_id=2109659370]
-polygon = PackedVector2Array(-130.90909, -1170.909, -1189.0908, -858.18176, -1250.909, 76.36363, -1323.6364, 800, -1149.0908, 1047.2727, 1149.0908, 1072.7273, 1305.4545, 636.3636, 901.8182, -927.2727)
+polygon = PackedVector2Array(-130.90909, -1170.909, -1189.0908, -858.18176, -1214.5454, 763.63635, -1043.6364, 1018.18176, 1149.0908, 1072.7273, 1305.4545, 636.3636, 901.8182, -927.2727)
 
 [editable path="Wood"]
 [editable path="Metal"]

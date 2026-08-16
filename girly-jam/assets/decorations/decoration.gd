@@ -9,6 +9,11 @@ func _ready() -> void:
 	input_event.connect(_on_input_event)
 
 func _on_input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
+	if ToolsManager.follow_tool:
+		dragging = false
+		_check_if_in_carriage_bounds()
+		return
+	
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		_select()
 		dragging = true

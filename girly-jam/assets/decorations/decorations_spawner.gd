@@ -14,3 +14,5 @@ func on_spawn_deco_pressed(decoration_prefab : PackedScene) -> void:
 
 func deco_store_button_pressed() -> void:
 	self.visible = !self.visible
+	if ToolsManager.follow_tool:
+		ToolsManager.follow_tool.deselect()

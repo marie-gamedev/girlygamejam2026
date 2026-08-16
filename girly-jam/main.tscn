@@ -87,14 +87,14 @@ scale = Vector2(1.1621035, 1.1621037)
 texture = ExtResource("3_h2yge")
 
 [node name="StoneFloor" type="Sprite2D" parent="World/Visuals" unique_id=707534679]
-position = Vector2(234.0677, 280.97232)
+position = Vector2(229.05847, 176.68924)
 scale = Vector2(0.201028, 0.201028)
 texture = ExtResource("5_vivmo")
 
 [node name="Carriages" type="Node2D" parent="World" unique_id=1626827974]
 
 [node name="Carriage_Princess_Pauper" parent="World/Carriages" unique_id=575866561 instance=ExtResource("6_cegan")]
-position = Vector2(288.71384, 206.74461)
+position = Vector2(301.91998, 206.74461)
 scale = Vector2(0.7977114, 0.7977114)
 
 [node name="Carriage_Charm_School" parent="World/Carriages" unique_id=1517918759 instance=ExtResource("7_getpj")]

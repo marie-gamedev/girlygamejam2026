@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqcchjvc1alo6"]
 
 [ext_resource type="Script" uid="uid://bhaj6mil2p1l5" path="res://dialogue/balloon.gd" id="1_36de5"]
-[ext_resource type="Texture2D" uid="uid://c3bf1x35yobo" path="res://assets/portraits/kyle.png" id="2_3fodd"]
+[ext_resource type="Texture2D" uid="uid://g7mrmtw1pc1k" path="res://assets/portraits/kyle.png" id="2_3fodd"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 [ext_resource type="Texture2D" uid="uid://di5x3s1ikn7ak" path="res://assets/icon.svg" id="5_0hx7h"]
@@ -113,10 +113,11 @@ script = ExtResource("1_36de5")
 [node name="Portrait" type="TextureRect" parent="." unique_id=1775106335]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 150)
-offset_left = -175.0
-offset_top = -4.0
-offset_right = 509.0
-offset_bottom = 908.0001
+offset_left = 15.0
+offset_top = 73.0
+offset_right = 699.0
+offset_bottom = 1468.0
+scale = Vector2(0.5444735, 0.5444735)
 texture = ExtResource("2_3fodd")
 
 [node name="Balloon" type="Control" parent="." unique_id=359403728]
