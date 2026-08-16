@@ -1,42 +1,42 @@
 ~ start
 Prince Nicholas: M'lady, I am Prince Nicholas, young swain from the east, most priviliged to make your aquaintance.
-- I, kind swain and bonnie..
+- I, kind swain and Bonnie...
 Prince Nicholas: pfffha ha
-- ..maiden of washadia..
-Prince Nicholas: washadia? as in [wait=1]"wash"?
-- ..honored above all..
-Prince Nicholas: .. yea?
-- ..to be welcomed into..
+- ...maiden of Washadia...
+Prince Nicholas: Washadia? as in [wait=1]"wash"?
+- ...honored above all...
+Prince Nicholas: ...yea?
+- ...to be welcomed into...
 Prince Nicholas: into.. what?
-- ..your swayniness! :3
+- ...your swayniness! :3
 Prince Nicholas: Well.. [wait=1] done! ha ha
-Prince Nicholas: So, I am finally getting married to my blair, maiden of.. [wait=1] yea you get the gist!
+Prince Nicholas: So, I am finally getting married to my Blair, maiden of... [wait=1] yea you get the gist!
 Prince Nicholas: And I need this carriage cleaned and prepped for the wedding, please!
 - Okay, got it!
 => END
 
 #To do
 ~ postdialoguebad
-Prince Nicholas: that's kinda ass..
+Prince Nicholas: that's kinda ass...
 
 ~ postdialogue
-Prince Nicholas: Bonnie, maiden of.. washadia, I extend my heartfelt thanks to you and your royal carriage washing services.
+Prince Nicholas: Bonnie, maiden of... Washadia, I extend my heartfelt thanks to you and your royal carriage washing services.
 Prince Nicholas: You, M'lady and Prince Kyle will forever have my utmost gratitude!
-- (giggles) I, kind swain..
+- (giggles) I, kind swain...
 	Prince Nicholas: mhm?
-	- ..and bonnie..
+	- ...and Bonnie...
 	Prince Nicholas: maiden of?
-	- ..maiden of washadia..
+	- ...maiden of Washadia...
 	Prince Nicholas: mhm mhm
-	- ..am very pleased..
+	- ...am very pleased...
 	Prince Nicholas: yea?
 	- ..to have fullfilled your expectations.
 	Prince Nicholas: The pleasure is mi-
-	- It has been my great pleasure..
+	- It has been my great pleasure...
 	Prince Nicholas: There's more??
-	- ..to be of service to you.
+	- ...to be of service to you.
 	Prince Nicholas: Okay, okay, you win! Thank you again, Bonnie!
 	=> END
-- no problemo
+- no problemo!
 Prince Nicholas: Ha ha, alright
 => END
