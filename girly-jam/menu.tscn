@@ -130,11 +130,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.17349803, 0.0727709, 0.013847692, 1)
 theme_override_font_sizes/font_size = 20
-text = "a Game by
+text = "a game by
 Marie & Annika
 
-External Assets
-Cozy UI by mandinhart @itch (used for UI and butterly decorations)
+external assets
+Cozy UI by mandinhart @itch (used for UI and butterfly decorations)
 SFX by Freesound Community, Universfield, r0t0r @Pixabay
 Music by Alba_Mac @Pixabay"
 horizontal_alignment = 1
